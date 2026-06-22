@@ -1,0 +1,31 @@
+<svg width="600" height="360" viewBox="0 0 600 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Stable account timeline</title>
+  <desc id="desc">A reviewed account moving through approval, live processing, and settled payouts.</desc>
+  <rect x="44" y="32" width="512" height="296" rx="32" fill="#F9F9F7"/>
+  <rect x="84" y="76" width="432" height="208" rx="28" fill="white"/>
+  <rect x="112" y="108" width="148" height="144" rx="22" fill="#F3F3F0"/>
+  <circle cx="150" cy="146" r="24" fill="#C8FB9D"/>
+  <path d="M139 158L147 123H168L164 137H176L169 158H139Z" fill="#202020"/>
+  <rect x="134" y="188" width="96" height="12" rx="6" fill="#202020"/>
+  <rect x="134" y="214" width="72" height="9" rx="4.5" fill="#A0A09A"/>
+  <path d="M286 179H448" stroke="#D7D7D1" stroke-width="8" stroke-linecap="round"/>
+  <circle cx="286" cy="179" r="17" fill="#C8FB9D"/>
+  <circle cx="340" cy="179" r="17" fill="#C8FB9D"/>
+  <circle cx="394" cy="179" r="17" fill="#C8FB9D"/>
+  <circle cx="448" cy="179" r="17" fill="#C8FB9D"/>
+  <path d="M278 179L284 185L295 172" stroke="#202020" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M332 179L338 185L349 172" stroke="#202020" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M386 179L392 185L403 172" stroke="#202020" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M440 179L446 185L457 172" stroke="#202020" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="266" y="143" fill="#5F5F59" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">Reviewed</text>
+  <text x="326" y="223" fill="#5F5F59" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">Approved</text>
+  <text x="384" y="143" fill="#5F5F59" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">Live</text>
+  <text x="430" y="223" fill="#5F5F59" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="700">Settled</text>
+  <rect x="306" y="84" width="128" height="40" rx="20" fill="#202020"/>
+  <circle cx="329" cy="104" r="8" fill="#C8FB9D"/>
+  <text x="346" y="109" fill="white" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">Account live</text>
+  <rect x="324" y="246" width="158" height="54" rx="20" fill="#ECFCE0"/>
+  <text x="346" y="269" fill="#2D5F35" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">Next payout</text>
+  <text x="346" y="291" fill="#202020" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="700">$6,841.24</text>
+  <path d="M116 284C173 320 242 322 304 286" stroke="#E6E6E1" stroke-width="8" stroke-linecap="round"/>
+</svg>

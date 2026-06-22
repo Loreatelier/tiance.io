@@ -1,0 +1,37 @@
+<svg width="600" height="360" viewBox="0 0 600 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Human review workbench</title>
+  <desc id="desc">A Tiance reviewer checking a merchant profile, website preview, and business notes.</desc>
+  <rect x="44" y="32" width="512" height="296" rx="32" fill="#F9F9F7"/>
+  <rect x="72" y="62" width="456" height="236" rx="24" fill="white"/>
+  <rect x="72" y="62" width="456" height="48" rx="24" fill="#F2F2EF"/>
+  <circle cx="100" cy="86" r="6" fill="#D9D9D5"/>
+  <circle cx="120" cy="86" r="6" fill="#D9D9D5"/>
+  <circle cx="140" cy="86" r="6" fill="#C8FB9D"/>
+  <rect x="164" y="76" width="210" height="20" rx="10" fill="white"/>
+  <rect x="92" y="134" width="128" height="122" rx="18" fill="#F4F4F1"/>
+  <rect x="110" y="152" width="52" height="52" rx="16" fill="#C8FB9D"/>
+  <path d="M129 189L135 162H152L148 173H158L153 189H129Z" fill="#202020"/>
+  <rect x="110" y="218" width="76" height="10" rx="5" fill="#2B2B2B"/>
+  <rect x="110" y="238" width="92" height="8" rx="4" fill="#A0A09A"/>
+  <rect x="242" y="132" width="154" height="60" rx="16" fill="#F4F4F1"/>
+  <rect x="260" y="151" width="78" height="10" rx="5" fill="#30302F"/>
+  <rect x="260" y="172" width="110" height="8" rx="4" fill="#9D9D96"/>
+  <rect x="242" y="208" width="154" height="64" rx="16" fill="#F4F4F1"/>
+  <rect x="260" y="227" width="96" height="10" rx="5" fill="#30302F"/>
+  <rect x="260" y="248" width="116" height="8" rx="4" fill="#9D9D96"/>
+  <rect x="412" y="132" width="88" height="140" rx="18" fill="#202020"/>
+  <circle cx="456" cy="165" r="20" fill="#C8FB9D"/>
+  <path d="M448 177L453 153H469L466 163H475L470 177H448Z" fill="#202020"/>
+  <rect x="434" y="202" width="44" height="8" rx="4" fill="white"/>
+  <rect x="426" y="222" width="60" height="7" rx="3.5" fill="#CFCFC8"/>
+  <rect x="420" y="246" width="72" height="14" rx="7" fill="#C8FB9D"/>
+  <path d="M249 121C270 104 308 105 327 121" stroke="#BFBFB8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M400 196C414 189 422 179 428 165" stroke="#BFBFB8" stroke-width="4" stroke-linecap="round"/>
+  <rect x="158" y="38" width="156" height="36" rx="18" fill="#202020"/>
+  <circle cx="178" cy="56" r="10" fill="#C8FB9D"/>
+  <path d="M174 63L177 49H187L184 55H190L187 63H174Z" fill="#202020"/>
+  <text x="198" y="61" fill="white" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="600">Real reviewer</text>
+  <rect x="338" y="286" width="122" height="34" rx="17" fill="#ECFCE0"/>
+  <path d="M358 303L365 310L381 292" stroke="#2A7F35" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="394" y="308" fill="#2D5F35" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="700">Human checked</text>
+</svg>

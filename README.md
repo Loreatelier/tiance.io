@@ -1,18 +1,50 @@
-# Finns Clone Experiment
+# TIANCE.io Homepage
 
-This is a self-hosted static clone experiment for the public Finns Framer preview:
+Static marketing homepage for TIANCE — a cross-border payment collection platform for verified digital merchants.
 
-https://modern-seat-542676.framer.app/
+## Production scope
 
-## Scope
+This folder is the publishable public website bundle for `tiance.io`.
 
-- Recreates the Finns homepage as a self-hosted static site.
-- Covers the main homepage sections: floating nav, hero, dashboard preview, trust logos, feature cards, image cards, benefits, quote, workflow rows, CTA, testimonials, and footer.
-- Includes Framer-like interaction feel: scroll reveal, logo/testimonial ticker motion, hover lift states, floating dashboard/phone elements, and sticky nav shadow.
-- Uses hand-built HTML/CSS/JS instead of Framer runtime code.
-- Intended as a self-hosting feasibility clone, not a production TIANCE page yet.
+It contains:
 
-## Run Locally
+- `index.html` — homepage markup and SEO metadata
+- `styles.css` — visual system and responsive layout
+- `script.js` — lightweight homepage interactions
+- `assets/` — logo, product visuals, payment logos, and supporting imagery
+
+No backend, database, or Supabase project is required for the current homepage. Contact routing is handled through outbound links such as Telegram, Discord, and email.
+
+## Recommended deployment
+
+Deploy this folder as a static site through Vercel.
+
+### Vercel settings
+
+- Framework preset: `Other`
+- Build command: leave empty
+- Output directory: `.`
+- Install command: leave empty
+
+### Domain
+
+After the Vercel deployment is live, connect:
+
+- `tiance.io`
+- `www.tiance.io`
+
+Use the DNS records shown inside Vercel for the project. Typical Vercel records are:
+
+```text
+A      @     76.76.21.21
+CNAME  www   cname.vercel-dns.com
+```
+
+Always follow the exact records Vercel displays for the project.
+
+## Run locally
+
+From this folder:
 
 ```bash
 python3 -m http.server 8088 --bind 127.0.0.1
@@ -24,8 +56,8 @@ Then open:
 http://127.0.0.1:8088/
 ```
 
-## Notes
+## Notes before publishing
 
-- The layout is intentionally close to the Finns original for visual comparison.
-- The product content has not yet been adapted to TIANCE.
-- Some exact Framer details are approximated, especially proprietary icons, generated class behavior, and a few image selections.
+- Confirm the Telegram, Discord, and email links are correct before launch.
+- Keep the site static until forms, onboarding records, login, or dashboard features require a backend.
+- Do not publish the parent project folder or the old `site/` prototype folder as the production website.

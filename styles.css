@@ -17,13 +17,20 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: var(--lime);
+  color: var(--ink);
+}
+
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   min-width: 320px;
   margin: 0;
+  overflow-x: hidden;
   background: var(--page);
   color: var(--ink);
   font-family: var(--font);
@@ -151,10 +158,10 @@ button {
 }
 
 h1 {
-  max-width: 760px;
+  max-width: 960px;
   margin: 0;
   color: var(--ink);
-  font-size: clamp(52px, 4.25vw, 60px);
+  font-size: clamp(50px, 3.9vw, 56px);
   font-weight: 500;
   letter-spacing: -0.055em;
   line-height: 1;
@@ -187,7 +194,7 @@ h1 {
   align-self: flex-end;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .button {
@@ -207,6 +214,49 @@ h1 {
 .button-dark {
   background: var(--ink);
   color: white;
+}
+
+.contact-panel {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact-panel p {
+  margin: 0;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.contact-options {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.contact-icon-link {
+  width: 46px;
+  height: 46px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--ink);
+  color: #fff;
+  transition: transform 180ms ease, background 180ms ease;
+}
+
+.contact-icon-link:hover {
+  transform: translateY(-2px);
+  background: #111;
+}
+
+.contact-icon-link svg {
+  width: 18px;
+  height: 18px;
+  display: block;
+  fill: currentColor;
 }
 
 .dashboard-stage {
@@ -822,19 +872,113 @@ h1 {
 }
 
 .trust-strip p {
-  margin: 0 0 24px;
-  color: var(--muted);
+  margin: 0 0 28px;
+  color: #5f6060;
   font-size: 15px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
 }
 
 .logos {
   display: flex;
+  width: 100%;
+  overflow: hidden;
+  gap: 0;
+  padding: 4px 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.logo-marquee:hover .logo-track {
+  animation-play-state: paused;
+}
+
+.logo-track {
+  flex: 0 0 max-content;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: clamp(42px, 6vw, 76px);
+  padding-right: clamp(42px, 6vw, 76px);
+  animation: paymentLogoScroll 56s linear infinite;
+}
+
+.payment-logo {
+  height: 36px;
+  min-width: 92px;
+  display: inline-flex;
+  align-items: center;
   justify-content: center;
-  gap: 34px;
-  color: #8b8b8b;
-  font-size: 22px;
-  font-weight: 500;
+  gap: 9px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.payment-logo img {
+  width: auto;
+  max-width: 140px;
+  height: 30px;
+  display: block;
+  object-fit: contain;
+  opacity: 0.9;
+}
+
+.payment-logo span {
+  color: #2b2d2d;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   opacity: 0.78;
+}
+
+.logo-visa img {
+  height: 34px;
+  max-width: 154px;
+}
+
+.logo-mastercard img {
+  height: 28px;
+  max-width: 120px;
+}
+
+.logo-mastercard span {
+  font-size: 14px;
+  opacity: 0.82;
+}
+
+.logo-apple img {
+  height: 28px;
+  max-width: 120px;
+}
+
+.logo-google img {
+  height: 30px;
+  max-width: 128px;
+}
+
+.logo-wechat img {
+  height: 30px;
+}
+
+.logo-crypto {
+  min-width: 142px;
+}
+
+.logo-crypto img {
+  height: 29px;
+}
+
+@keyframes paymentLogoScroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
 }
 
 .reveal {
@@ -918,6 +1062,8 @@ h1 {
 }
 
 .feature-panel {
+  display: flex;
+  flex-direction: column;
   min-height: 545px;
   padding: 58px 40px 40px;
   border-radius: 24px;
@@ -931,6 +1077,7 @@ h1 {
 }
 
 .feature-panel h3 {
+  min-height: 109px;
   margin: 0 0 20px;
   font-size: 28px;
   font-weight: 500;
@@ -940,14 +1087,27 @@ h1 {
 
 .feature-panel p {
   min-height: 54px;
-  margin: 0 0 44px;
+  margin: 0 0 30px;
   color: var(--muted);
   font-size: 15px;
   line-height: 1.45;
 }
 
-/* TODO: remove when feature card images are ready */
-.currency-search, .currency-list, .qr-card, .pill-button, .workspace-card { display: none; }
+.feature-illustration {
+  width: calc(100% + 18px);
+  height: 226px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin: auto -9px 0;
+}
+
+.feature-illustration img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
 
 .currency-search {
   height: 48px;
@@ -1083,97 +1243,23 @@ h1 {
   line-height: 1.5;
 }
 
-.mini-dashboard {
+.dashboard-screenshot {
   height: 510px;
-  display: grid;
-  grid-template-columns: 170px 1fr;
   border-radius: 24px;
-  background: var(--panel);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(247, 247, 244, 0.92)),
+    var(--panel);
+  box-shadow: 0 24px 70px rgba(30, 35, 35, 0.08);
   overflow: hidden;
 }
 
-.mini-side {
-  padding: 28px 18px;
-  background: #f4f4f1;
-}
-
-.mini-side-logo {
-  display: block;
-  width: 24px;
-  height: 24px;
-  margin-bottom: 34px;
-  border-radius: 6px;
-  background: #d8f8b8;
-  overflow: hidden;
-}
-
-.mini-side-logo .logo-image {
+.dashboard-screenshot img {
   width: 100%;
   height: 100%;
-}
-
-.mini-side p {
-  margin: 0 0 10px;
-  border-radius: 8px;
-  padding: 11px;
-  color: #555;
-}
-
-.mini-side .active {
-  background: rgba(217, 217, 217, 0.45);
-}
-
-.mini-content {
-  padding: 42px;
-  background: #fff;
-}
-
-.mini-summary {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin: 24px 0;
-}
-
-.mini-summary span {
-  border: 1px solid var(--line);
-  border-radius: 12px;
-  padding: 18px;
-  color: #555;
-}
-
-.mini-summary b {
   display: block;
-  margin-top: 10px;
-  color: var(--ink);
-  font-size: 20px;
-  font-weight: 500;
+  object-fit: cover;
+  object-position: left top;
 }
-
-.mini-chart {
-  height: 250px;
-  display: flex;
-  align-items: end;
-  gap: 18px;
-  border: 1px solid var(--line);
-  border-radius: 16px;
-  padding: 28px;
-}
-
-.mini-chart i {
-  width: 44px;
-  height: 55%;
-  border-radius: 10px 10px 4px 4px;
-  background: var(--lime);
-}
-
-.mini-chart i:nth-child(2) { height: 72%; }
-.mini-chart i:nth-child(3) { height: 42%; }
-.mini-chart i:nth-child(4) { height: 62%; }
-.mini-chart i:nth-child(5) { height: 86%; outline: 2px solid var(--ink); }
-.mini-chart i:nth-child(6) { height: 58%; }
-.mini-chart i:nth-child(7) { height: 54%; }
-.mini-chart i:nth-child(8) { height: 58%; }
 
 .image-features {
   padding: 70px 0 150px;
@@ -1230,44 +1316,6 @@ h1 {
   font-size: 48px;
   font-weight: 500;
   letter-spacing: -0.06em;
-}
-
-.card-actions {
-  position: absolute;
-  left: 24px;
-  right: 24px;
-  bottom: 118px;
-  display: flex;
-  gap: 18px;
-}
-
-.card-actions i {
-  width: 48px;
-  height: 48px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.45);
-  color: #fff;
-  font-style: normal;
-  backdrop-filter: blur(8px);
-}
-
-.card-actions.dark-first i:first-child {
-  background: var(--ink);
-}
-
-.split-pill {
-  position: absolute;
-  left: 50%;
-  bottom: 118px;
-  width: 200px;
-  height: 48px;
-  border-radius: 999px;
-  background: white;
-  transform: translateX(-50%);
-  font-weight: 500;
 }
 
 .spend-card h3 {
@@ -1707,10 +1755,7 @@ h1 {
   font-size: clamp(44px, 4vw, 60px);
   font-weight: 600;
   letter-spacing: -0.06em;
-  background: linear-gradient(135deg, var(--ink) 40%, #14b8a6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #000;
 }
 
 .footer-links {
@@ -1868,6 +1913,10 @@ h1 {
     display: grid;
     gap: 32px;
   }
+
+  .feature-panel h3 {
+    min-height: 0;
+  }
 }
 
 @media (max-width: 640px) {
@@ -1893,7 +1942,9 @@ h1 {
   }
 
   .hero-ctas {
-    flex-wrap: wrap;
+    width: auto;
+    flex-direction: row;
+    align-items: center;
   }
 
   .dashboard-shell {
@@ -1905,8 +1956,39 @@ h1 {
   }
 
   .logos {
-    flex-wrap: wrap;
-    gap: 18px;
-    font-size: 18px;
+    width: calc(100% + 40px);
+    margin-left: -20px;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 14%, #000 86%, transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 14%, #000 86%, transparent);
+  }
+
+  .payment-logo {
+    height: 36px;
+    min-width: 86px;
+  }
+
+  .payment-logo img {
+    max-width: 118px;
+    height: 28px;
+  }
+
+  .logo-visa img {
+    height: 32px;
+    max-width: 142px;
+  }
+
+  .logo-mastercard img {
+    height: 27px;
+    max-width: 138px;
+  }
+
+  .logo-apple img {
+    height: 27px;
+    max-width: 112px;
+  }
+
+  .logo-google img {
+    height: 28px;
+    max-width: 124px;
   }
 }

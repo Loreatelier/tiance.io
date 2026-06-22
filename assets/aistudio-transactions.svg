@@ -1,0 +1,94 @@
+<svg width="1120" height="680" viewBox="0 0 1120 680" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Tiance transactions dashboard</title>
+  <desc id="desc">A simplified transactions dashboard with status tabs, filters, and recent payment rows.</desc>
+  <rect width="1120" height="680" rx="32" fill="#FFFFFF"/>
+  <rect x="0.5" y="0.5" width="1119" height="679" rx="31.5" stroke="#E7E7E4"/>
+
+  <rect x="34" y="32" width="1052" height="54" rx="18" fill="#F7F9FB"/>
+  <rect x="46" y="42" width="76" height="34" rx="10" fill="#FFFFFF" stroke="#E3E7EC"/>
+  <text x="84" y="64" text-anchor="middle" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="750">Today</text>
+  <text x="162" y="64" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">Last 7 Days</text>
+  <text x="276" y="64" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">Last 4 Weeks</text>
+  <text x="414" y="64" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">Month to Date</text>
+  <text x="564" y="64" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">Quarter to Date</text>
+  <text x="728" y="64" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">Custom</text>
+  <text x="826" y="64" fill="#6B7280" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">All Transactions</text>
+  <rect x="946" y="39" width="120" height="38" rx="12" fill="#111827"/>
+  <text x="1006" y="63" text-anchor="middle" fill="#FFFFFF" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="750">Export Data</text>
+
+  <rect x="34" y="112" width="1052" height="162" rx="22" fill="#FFFFFF" stroke="#E6E6E6"/>
+  <text x="62" y="152" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="750">All Statuses</text>
+  <line x1="62" y1="167" x2="138" y2="167" stroke="#C8FB9D" stroke-width="4" stroke-linecap="round"/>
+  <text x="190" y="152" fill="#344054" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650">Pending / Processing</text>
+  <text x="390" y="152" fill="#344054" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650">Paid</text>
+  <text x="474" y="152" fill="#344054" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650">Error</text>
+  <text x="560" y="152" fill="#344054" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650">Refund handling</text>
+  <text x="728" y="152" fill="#344054" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650">Active alerts</text>
+  <text x="872" y="152" fill="#344054" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="650">Handled alerts</text>
+  <line x1="62" y1="185" x2="1058" y2="185" stroke="#F0F1F3"/>
+
+  <rect x="62" y="208" width="190" height="40" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="82" y="233" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">Currency: All Currencies</text>
+  <rect x="270" y="208" width="216" height="40" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="290" y="233" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">Payment Status: All Statuses</text>
+  <rect x="504" y="208" width="260" height="40" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="524" y="233" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="650">Chargeback Alert: All Alert Statuses</text>
+  <rect x="782" y="208" width="238" height="40" rx="12" fill="#FFFFFF" stroke="#E5E7EB"/>
+  <text x="814" y="233" fill="#111827" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="750">Custom Paid Time Range</text>
+  <path d="M802 219H790M802 231H790M796 213V225M796 225V237" stroke="#6B7280" stroke-width="1.5" stroke-linecap="round"/>
+
+  <rect x="34" y="304" width="1052" height="340" rx="24" fill="#FFFFFF" stroke="#E6E6E6"/>
+  <rect x="34" y="304" width="1052" height="58" rx="24" fill="#FAFAFA"/>
+  <line x1="34" y1="362" x2="1086" y2="362" stroke="#E6E6E6"/>
+  <text x="66" y="340" fill="#59606A" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="850" letter-spacing=".08em">PAID AT</text>
+  <text x="236" y="340" fill="#59606A" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="850" letter-spacing=".08em">AMOUNT</text>
+  <text x="392" y="340" fill="#59606A" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="850" letter-spacing=".08em">STATUS</text>
+  <text x="540" y="340" fill="#59606A" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="850" letter-spacing=".08em">PAYER</text>
+  <text x="780" y="340" fill="#59606A" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="850" letter-spacing=".08em">ORDER ID</text>
+  <text x="988" y="340" fill="#59606A" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="850" letter-spacing=".08em">ALERT</text>
+
+  <g font-family="Inter, Arial, sans-serif" font-size="14">
+    <line x1="34" y1="432" x2="1086" y2="432" stroke="#F1F2F4"/>
+    <text x="66" y="405" fill="#4B5563" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">2026-06-12 01:20</text>
+    <text x="236" y="405" fill="#111827" font-weight="850">1,500.00 <tspan fill="#6B7280" font-size="11" font-weight="650">USD</tspan></text>
+    <rect x="392" y="383" width="74" height="30" rx="15" fill="#EEFFE5" stroke="#D7F8C6"/>
+    <text x="429" y="403" text-anchor="middle" fill="#14532D" font-size="13" font-weight="800">Paid</text>
+    <text x="540" y="400" fill="#111827" font-weight="800">William Johnson</text>
+    <text x="540" y="420" fill="#6B7280" font-size="12">wjohnson@gmail.com</text>
+    <text x="780" y="405" fill="#344054" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">2063894655432101376</text>
+    <rect x="988" y="386" width="70" height="24" rx="6" fill="#F8FAFC" stroke="#E5E7EB"/>
+    <text x="1023" y="403" text-anchor="middle" fill="#475467" font-size="11" font-weight="850">NONE</text>
+
+    <line x1="34" y1="502" x2="1086" y2="502" stroke="#F1F2F4"/>
+    <text x="66" y="475" fill="#4B5563" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">2026-06-12 04:50</text>
+    <text x="236" y="475" fill="#111827" font-weight="850">45,000.00 <tspan fill="#6B7280" font-size="11" font-weight="650">TWD</tspan></text>
+    <rect x="392" y="453" width="74" height="30" rx="15" fill="#EEFFE5" stroke="#D7F8C6"/>
+    <text x="429" y="473" text-anchor="middle" fill="#14532D" font-size="13" font-weight="800">Paid</text>
+    <text x="540" y="470" fill="#111827" font-weight="800">Grace Lin</text>
+    <text x="540" y="490" fill="#6B7280" font-size="12">lin.family.hao@gmail.com</text>
+    <text x="780" y="475" fill="#344054" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">2063894662719820800</text>
+    <rect x="988" y="456" width="76" height="24" rx="6" fill="#FFF7ED" stroke="#FED7AA"/>
+    <text x="1026" y="473" text-anchor="middle" fill="#A15C12" font-size="11" font-weight="900">ACTIVE</text>
+
+    <line x1="34" y1="572" x2="1086" y2="572" stroke="#F1F2F4"/>
+    <text x="66" y="545" fill="#9CA3AF" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-style="italic">Pending settlement</text>
+    <text x="236" y="545" fill="#111827" font-weight="850">60,000.00 <tspan fill="#6B7280" font-size="11" font-weight="650">TWD</tspan></text>
+    <rect x="392" y="523" width="112" height="30" rx="15" fill="#FFFBEB" stroke="#FDE68A"/>
+    <text x="448" y="543" text-anchor="middle" fill="#92400E" font-size="13" font-weight="800">Processing</text>
+    <text x="540" y="540" fill="#111827" font-weight="800">Isabella Garcia</text>
+    <text x="540" y="560" fill="#6B7280" font-size="12">yating_huang@gmail.com</text>
+    <text x="780" y="545" fill="#344054" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">2063894682001928320</text>
+    <rect x="988" y="526" width="70" height="24" rx="6" fill="#F8FAFC" stroke="#E5E7EB"/>
+    <text x="1023" y="543" text-anchor="middle" fill="#475467" font-size="11" font-weight="850">NONE</text>
+
+    <text x="66" y="615" fill="#4B5563" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">2026-06-12 05:42</text>
+    <text x="236" y="615" fill="#111827" font-weight="850">150.00 <tspan fill="#6B7280" font-size="11" font-weight="650">USD</tspan></text>
+    <rect x="392" y="593" width="74" height="30" rx="15" fill="#EEFFE5" stroke="#D7F8C6"/>
+    <text x="429" y="613" text-anchor="middle" fill="#14532D" font-size="13" font-weight="800">Paid</text>
+    <text x="540" y="610" fill="#111827" font-weight="800">John Doe</text>
+    <text x="540" y="630" fill="#6B7280" font-size="12">john.doe@gmail.com</text>
+    <text x="780" y="615" fill="#344054" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">2063894701234567001</text>
+    <rect x="988" y="596" width="70" height="24" rx="6" fill="#F8FAFC" stroke="#E5E7EB"/>
+    <text x="1023" y="613" text-anchor="middle" fill="#475467" font-size="11" font-weight="850">NONE</text>
+  </g>
+</svg>

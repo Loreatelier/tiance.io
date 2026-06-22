@@ -31,32 +31,35 @@
       <header class="hero">
         <div class="hero-container">
           <div class="hero-copy">
-            <a class="announcement" href="#about">
+            <a class="announcement" href="#why-tiance">
               <span>Cross-border payment collection for digital merchants</span>
             </a>
-            <h1>Payments for businesses that deserve a second look.</h1>
+            <h1>Stripe rejected your category. We understand what you sell.</h1>
             <p>
-              We review your business before you go live — so your account
-              doesn't freeze when revenue does.
+              We don't approve first and freeze later. We look at your product, business model, and customers upfront — so your payment account stays stable as order volume scales up.
             </p>
-            <div class="hero-actions">
-              <a class="rating" href="#rating" aria-label="4.9 rating">
-                <span class="stars" aria-hidden="true">★★★★★</span>
-                <span>4.9 rating</span>
-                <span aria-hidden="true">›</span>
+          </div>
+
+          <div class="hero-ctas contact-panel" aria-label="Contact Tiance">
+            <p>Contact us</p>
+            <div class="contact-options">
+              <a class="contact-icon-link" href="https://t.me/TIANCE_support_bot" aria-label="Contact Tiance on Telegram">
+                <svg viewBox="0 0 24 24" role="img">
+                  <path d="M21.4 4.4 18.2 19c-.2 1-.8 1.2-1.6.8l-4.5-3.3-2.2 2.1c-.2.2-.4.4-.9.4l.3-4.7 8.5-7.7c.4-.3-.1-.5-.5-.2L6.8 13 2.3 11.6c-1-.3-1-1 .2-1.4L20 3.5c.8-.3 1.6.2 1.4.9Z" />
+                </svg>
+              </a>
+              <a class="contact-icon-link" href="https://discord.gg/tiance" aria-label="Contact Tiance on Discord">
+                <svg viewBox="0 0 24 24" role="img">
+                  <path d="M18.8 5.4A15.2 15.2 0 0 0 15 4.2l-.2.4c1.3.3 2.5.9 3.6 1.6a12 12 0 0 0-10.7 0c1.1-.8 2.3-1.3 3.6-1.6L11 4.2a15.4 15.4 0 0 0-3.8 1.2C4.8 9 4.2 12.5 4.5 16c1.6 1.2 3.2 1.9 4.8 2.3l.9-1.5c-.5-.2-1-.4-1.4-.7l.3-.2a10.8 10.8 0 0 0 9.8 0l.3.2c-.5.3-.9.6-1.4.7l.9 1.5c1.6-.4 3.3-1.2 4.8-2.3.4-4-1-7.4-3.7-10.6ZM10.2 14.1c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.5.8 1.5 1.7-.7 1.7-1.5 1.7Zm5.6 0c-.8 0-1.5-.8-1.5-1.7s.7-1.7 1.5-1.7 1.5.8 1.5 1.7-.6 1.7-1.5 1.7Z" />
+                </svg>
+              </a>
+              <a class="contact-icon-link" href="mailto:hello@tiance.io" aria-label="Email Tiance">
+                <svg viewBox="0 0 24 24" role="img">
+                  <path d="M4.7 6.5h14.6c.7 0 1.2.5 1.2 1.2v8.6c0 .7-.5 1.2-1.2 1.2H4.7c-.7 0-1.2-.5-1.2-1.2V7.7c0-.7.5-1.2 1.2-1.2Zm.9 2 6.4 4.2 6.4-4.2H5.6Zm13 7.2V10l-7.1 4.7L4.4 10v5.7h15.2Z" />
+                </svg>
               </a>
             </div>
           </div>
-
-          <div class="hero-ctas">
-            <a class="button button-dark" href="https://t.me/Tiance_support_bot" aria-label="Talk to Tiance on Telegram">
-              <span>Talk to Us on Telegram</span>
-              <span aria-hidden="true">→</span>
-            </a>
-            <button class="button button-dark" type="button" aria-label="Talk to Tiance on Discord">
-              <span>Talk to Us on Discord</span>
-              <span aria-hidden="true">→</span>
-            </button>
           </div>
         </div>
       </header>
@@ -72,15 +75,59 @@
 
       <section class="trust-strip">
         <p>Accepted payment methods</p>
-        <div class="logos" aria-hidden="true">
-          <!-- Replace each span with official SVG icon once assets are ready -->
-          <span>Visa</span>
-          <span>Mastercard</span>
-          <span>Apple Pay</span>
-          <span>Google Pay</span>
-          <span>WeChat Pay</span>
-          <span>Alipay</span>
-          <span>Crypto &amp; Stablecoins</span>
+        <div class="logos logo-marquee" aria-label="Accepted payment methods">
+          <div class="logo-track">
+            <span class="payment-logo logo-visa" aria-label="Visa">
+              <img src="./assets/payment-logos/visa-wordmark.svg" alt="" />
+            </span>
+            <span class="payment-logo logo-mastercard" aria-label="Mastercard">
+              <img src="./assets/payment-logos/mastercard-wordmark.svg" alt="" />
+              <span>Mastercard</span>
+            </span>
+            <span class="payment-logo logo-apple" aria-label="Apple Pay">
+              <img src="./assets/payment-logos/applepay-wordmark.svg" alt="" />
+            </span>
+            <span class="payment-logo logo-google" aria-label="Google Pay">
+              <img src="./assets/payment-logos/googlepay-wordmark.svg" alt="" />
+            </span>
+            <span class="payment-logo logo-wechat" aria-label="WeChat Pay">
+              <img src="./assets/payment-logos/wechat.svg" alt="" />
+              <span>Pay</span>
+            </span>
+            <span class="payment-logo logo-alipay" aria-label="Alipay">
+              <img src="./assets/payment-logos/alipay.svg" alt="" />
+            </span>
+            <span class="payment-logo logo-crypto" aria-label="Crypto and Stablecoins">
+              <img src="./assets/payment-logos/tether.svg" alt="" />
+              <span>Stablecoins</span>
+            </span>
+          </div>
+          <div class="logo-track" aria-hidden="true">
+            <span class="payment-logo logo-visa">
+              <img src="./assets/payment-logos/visa-wordmark.svg" alt="" />
+            </span>
+            <span class="payment-logo logo-mastercard">
+              <img src="./assets/payment-logos/mastercard-wordmark.svg" alt="" />
+              <span>Mastercard</span>
+            </span>
+            <span class="payment-logo logo-apple">
+              <img src="./assets/payment-logos/applepay-wordmark.svg" alt="" />
+            </span>
+            <span class="payment-logo logo-google">
+              <img src="./assets/payment-logos/googlepay-wordmark.svg" alt="" />
+            </span>
+            <span class="payment-logo logo-wechat">
+              <img src="./assets/payment-logos/wechat.svg" alt="" />
+              <span>Pay</span>
+            </span>
+            <span class="payment-logo logo-alipay">
+              <img src="./assets/payment-logos/alipay.svg" alt="" />
+            </span>
+            <span class="payment-logo logo-crypto">
+              <img src="./assets/payment-logos/tether.svg" alt="" />
+              <span>Stablecoins</span>
+            </span>
+          </div>
         </div>
       </section>
 
@@ -90,34 +137,24 @@
         <div class="feature-cards">
           <article class="feature-panel">
             <h3>Real people who review your business — and talk to you about it.</h3>
-            <p>Mainstream gateways score you by category and send an automated response — accept or reject, no conversation. At other platforms, the only way to get a human to look at your case is to make enough noise on Hacker News or X that an executive notices. At Tiance, a real person reviews your business model, your product, your website from day one. If you have questions, if something needs explaining, if you want to discuss your situation — you can. The review is a dialogue, not a verdict.</p>
-            <div class="currency-search">⌕ <span>Type currency code…</span></div>
-            <div class="currency-list">
-              <div><span>🇺🇸 US Dollar</span><em>USD</em></div>
-              <div><span>🇯🇵 Japanese Yen</span><em>JPY</em></div>
-              <div><span>🇮🇩 Indonesian Rupiah</span><em>IDR</em></div>
-              <div><span>🇦🇺 Australian Dollar</span><em>AUD</em></div>
-            </div>
+            <p>Other providers judge by category. Tiance reviews your product, website, and business model with a real person — so edge cases get a real conversation, not an automated rejection.</p>
+            <figure class="feature-illustration">
+              <img src="./assets/feature-illustrations/review-workbench.svg" alt="Tiance reviewer checking a merchant profile and business details" loading="lazy" />
+            </figure>
           </article>
           <article class="feature-panel">
             <h3>Real channels. Real volume. Not startup promises.</h3>
             <p>Our payment channels were built for cross-border e-commerce and carry established volume. When you join Tiance, you're plugging into infrastructure that already works — not waiting for a startup to build it.</p>
-            <div class="qr-card">
-              <strong>⌘ Code Scan</strong>
-              <div class="qr-grid" aria-hidden="true"></div>
-              <button type="button">Renew code</button>
-            </div>
+            <figure class="feature-illustration">
+              <img src="./assets/feature-illustrations/payment-rails.svg" alt="Cards, wallets, and stablecoins flowing into Tiance payment rails" loading="lazy" />
+            </figure>
           </article>
           <article class="feature-panel">
-            <h3>Your account stays live. We promise.</h3>
-            <p>Mainstream gateways approve fast and freeze faster — then hold your funds for 90 to 180 days with no phone number and no appeal. Tiance reviews your business before you go live. No surprise shutdowns. No fund holds. That's our promise.</p>
-            <button class="pill-button" type="button">Set a workspace⌄</button>
-            <div class="workspace-card">
-              <small>Workspaces</small>
-              <div><span class="square-logo"><img class="logo-image" src="./assets/logo-slanted-t.svg" alt="" /></span> Tiance <em>✓</em></div>
-              <div><span class="square-logo dark">s</span> Remote <em>⌘1</em></div>
-              <div><span class="square-logo green">◎</span> Chameleon Labs <em>⌘2</em></div>
-            </div>
+            <h3>Your account stays live.</h3>
+            <p>Stripe and Paddle can approve fast and freeze faster — then hold your funds for 90 to 180 days with no contact and no appeal. TIANCE reviews your business before you go live. That's the review that keeps your access stable.</p>
+            <figure class="feature-illustration">
+              <img src="./assets/feature-illustrations/account-stability.svg" alt="Reviewed account timeline staying live through approval and payouts" loading="lazy" />
+            </figure>
           </article>
         </div>
       </section>
@@ -127,22 +164,8 @@
           <h3>Once you're live, you see everything.</h3>
           <p>Real-time transaction tracking across USD, EUR, GBP, and 20+ currencies. One view for what's cleared, what's pending, and what's on the way.</p>
         </div>
-        <div class="mini-dashboard">
-          <div class="mini-side">
-            <span class="mini-side-logo"><img class="logo-image" src="./assets/logo-slanted-t.svg" alt="" /></span>
-            <p>Dashboard</p><p class="active">Transactions</p><p>Analytics</p><p>Templates</p>
-          </div>
-          <div class="mini-content">
-            <strong>Transactions</strong>
-            <div class="mini-summary">
-              <span>Main · USD<br><b>$5,290.45</b></span>
-              <span>Finance · EURO<br><b>€7,164.95</b></span>
-              <span>Upcoming<br><b>$5,290.45</b></span>
-            </div>
-            <div class="mini-chart" aria-hidden="true">
-              <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
-            </div>
-          </div>
+        <div class="dashboard-screenshot">
+          <img src="./assets/aistudio-transactions.svg" alt="Transactions dashboard with filters, export controls, and recent payments" loading="lazy" />
         </div>
       </section>
 
@@ -154,11 +177,10 @@
             <img src="./assets/card-tennis.jpg" alt="" />
             <div class="spend-overlay">
               <span>AI Web · SaaS</span>
-              <strong>$49/mo</strong>
+              <strong>$49 credits</strong>
             </div>
-            <div class="card-actions"><i>＋</i><i>≡</i><i>⇆</i><i>···</i></div>
             <h3>Credits and top-ups for AI products.</h3>
-            <p>Credit-based and top-up billing for AI tools and SaaS — sell usage credits, prepaid access, or digital tokens. Including categories that Stripe and Paddle won't touch, fully handled.</p>
+            <p>Credit-based and top-up billing for AI tools and SaaS — sell usage credits, prepaid access, or digital tokens. Categories Stripe and Paddle decline on policy — we review the actual business and make our own call.</p>
           </article>
           <article class="spend-card">
             <img src="./assets/card-green.jpg" alt="" />
@@ -166,7 +188,6 @@
               <strong>Telegram · Discord</strong>
               <span>Community Payments</span>
             </div>
-            <div class="card-actions dark-first"><i>＋</i><i>≡</i><i>⇆</i><i>···</i></div>
             <h3>Payments inside your community.</h3>
             <p>Collect payments directly inside Telegram channels, Discord servers, or WhatsApp groups. No redirect, no checkout friction, no broken conversion.</p>
           </article>
@@ -176,9 +197,8 @@
               <span>WooCommerce · Shopify</span>
               <strong>$238.00</strong>
             </div>
-            <button class="split-pill" type="button">→ Integrate</button>
             <h3>Sell globally from your own store.</h3>
-            <p>WooCommerce and Shopify integrations, plus API-based flows for custom storefronts. Cross-border customers, cross-border infrastructure.</p>
+            <p>Connect via major e-commerce platforms or direct API — your existing stack, unchanged. Cross-border customers, cross-border infrastructure.</p>
           </article>
         </div>
       </section>
@@ -206,7 +226,7 @@
             <article>
               <span class="line-icon">◇</span>
               <h3>20+ currencies, including crypto</h3>
-              <p>Collect in USD, EUR, GBP, and 20+ currencies. Accept and settle in crypto or stablecoins. No cap on transaction size.</p>
+              <p>Collect in USD, EUR, GBP, and 20+ currencies. Accept and settle in crypto or stablecoins.</p>
             </article>
           </div>
           <div class="phone-stack" aria-hidden="true">
@@ -232,19 +252,38 @@
       <section class="workflow-section reveal" id="how-it-works">
         <article class="workflow-row">
           <div class="workflow-copy">
+            <span class="section-kicker">PAYMENT CAPABILITIES</span>
+            <h2>One integration, every way your customers pay.</h2>
+            <p>One integration covers Western card networks, Asian mobile wallets, and crypto or stablecoins — however your customers pay, wherever they are. Connect via any major e-commerce platform or direct API — your stack, unchanged.</p>
+          </div>
+          <div class="workflow-ui currencies">
+            <div class="currency-bubbles"><i>₽</i><i>₦</i><i>₸</i><i>₩</i><i>€</i><i>£</i><i>₹</i><i>¥</i></div>
+            <p>20+ currencies, collected globally.</p>
+          </div>
+          <div class="workflow-ui payment">
+            <div class="payment-card">
+              <span>Payment<br><strong>USD · Cleared</strong></span>
+              <em>$2,480</em>
+            </div>
+            <p>Transactions cleared and settled on schedule.</p>
+          </div>
+        </article>
+
+        <article class="workflow-row">
+          <div class="workflow-copy">
             <span class="section-kicker">ONBOARDING</span>
-            <h2>From application to live payments in 3 days.</h2>
+            <h2>From application to live payments in as little as 3 days.</h2>
             <p>Tell us about your business, verify your product, choose channels, test, and go live.</p>
           </div>
           <div class="workflow-ui rule-builder">
-            <p>If <b>purchase</b> <b class="lime-chip">&gt; $1,200 ×</b> then</p>
-            <p><b>request approval</b> from <b class="lime-chip">CFO ×</b> <b class="lime-chip">CTO ×</b></p>
-            <span><strong>Automatically routes</strong> requests to keep things moving, especially when you need to make big purchases.</span>
+            <p>If <b>business type</b> <b class="lime-chip">AI / SaaS ×</b> then</p>
+            <p><b>route to</b> <b class="lime-chip">Channel Review ×</b> <b class="lime-chip">Risk Check ×</b></p>
+            <span><strong>Each application is reviewed.</strong> Business type, product category, and channel fit — all checked before you go live.</span>
           </div>
           <div class="workflow-ui approval">
-            <div><span class="avatar image-a"></span> Hana L. requested <button>Approve</button></div>
-            <p><b>✓ Conference ticket</b> <b>✓ Food</b> <b>✓ Hotel</b></p>
-            <span><strong>Track those business expenses</strong> like a pro! We've got your spending organized and ready for approval.</span>
+            <div><span class="avatar image-a"></span> Application submitted <button>Review</button></div>
+            <p><b>✓ Business verified</b> <b>✓ Channel matched</b> <b>✓ Test payment</b></p>
+            <span><strong>Go live in 3 days.</strong> Submit, get reviewed, match your channel, run a test payment — then you're collecting.</span>
           </div>
         </article>
 
@@ -255,16 +294,16 @@
             <p>Proper review before activation protects your funds and keeps your access stable.</p>
           </div>
           <div class="workflow-ui assets-card">
-            <small>Total assets</small>
-            <h3>$1,20M <span>+14.20%</span></h3>
+            <small>Pending settlement</small>
+            <h3>$12,480 <span>On schedule</span></h3>
             <div class="asset-bars"><i></i><i></i><i></i><i></i></div>
-            <p><strong>Watch your assets grow.</strong> Our real-time dashboard shows you exactly where your company is at.</p>
+            <p><strong>Settlement on track.</strong> Your cleared funds follow the agreed schedule — no surprise holds, no fund freezes.</p>
           </div>
           <div class="workflow-ui metadata">
-            <p><b>Property</b> metadata ›</p>
-            <p><b>Operator</b> contains</p>
-            <p><b>Value</b> "first time customer"</p>
-            <span><strong>Smart tags</strong> that actually make sense! Add context to your data without the headache.</span>
+            <p><b>Merchant type</b> AI Tool ›</p>
+            <p><b>Channel status</b> Approved</p>
+            <p><b>Review</b> Completed</p>
+            <span><strong>Every account reviewed.</strong> Business model, product, website — a real person signs off before your account goes active.</span>
           </div>
         </article>
       </section>
@@ -272,12 +311,11 @@
       <section class="dark-cta reveal">
         <div class="logo cta-logo"><img class="logo-image" src="./assets/logo-slanted-t.svg" alt="" /></div>
         <span class="section-kicker">Talk to Tiance</span>
-        <h2>Rejected by an algorithm?<br>Let's actually look at your business.</h2>
+        <h2>Rejected by Stripe or Creem?<br>Let's actually look at your business.</h2>
         <a class="button lime-button" href="https://t.me/TIANCE_support_bot">Talk to Us on Telegram →</a>
       </section>
 
       <section class="testimonial-marquee reveal">
-        <a class="rating centered" href="#rating"><span class="stars">★★★★★</span><span>4.9 rating</span><span>›</span></a>
         <h2>Here’s why merchants choose Tiance</h2>
         <div class="testimonial-track">
           <article>"We got rejected by Stripe and Creem before Tiance. They actually looked at our product, discussed our business, and approved us in a week."<span>Kevin Zhang · AI Web Founder</span></article>
@@ -301,7 +339,7 @@
         </div>
         <div class="footer-links">
           <div><strong>Products</strong><a>Hosted Checkout</a><a>Payment Links</a><a>WooCommerce</a><a>API Integration</a><a>Settlement & Reporting</a></div>
-          <div><strong>Solutions</strong><a>AI Web</a><a>SaaS & Digital Products</a><a>Digital Products</a><a>Community Sellers</a><a>Cross-Border Merchants</a></div>
+          <div><strong>Solutions</strong><a>AI Web</a><a>SaaS & Digital Products</a><a>Community Sellers</a><a>Cross-Border Merchants</a></div>
           <div><strong>Company</strong><a>Developers</a><a>Pricing</a><a>Compliance Center</a><a>Contact</a></div>
           <div><strong>Contact</strong><a>Telegram</a><a>Discord</a><a>Apply for Review</a></div>
         </div>
