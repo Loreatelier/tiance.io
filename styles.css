@@ -218,8 +218,9 @@ h1 {
 
 .contact-panel {
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   gap: 10px;
+  width: max-content;
 }
 
 .contact-panel p {
@@ -228,33 +229,40 @@ h1 {
   font-size: 14px;
   font-weight: 500;
   letter-spacing: -0.01em;
+  text-align: right;
 }
 
 .contact-options {
   display: inline-flex;
   align-items: center;
   gap: 10px;
+  justify-content: flex-end;
 }
 
 .contact-icon-link {
-  width: 46px;
-  height: 46px;
-  display: inline-grid;
-  place-items: center;
-  border-radius: 999px;
-  background: var(--ink);
-  color: #fff;
-  transition: transform 180ms ease, background 180ms ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none;
+  appearance: none;
+  color: var(--ink);
+  transition: transform 180ms ease, opacity 180ms ease;
 }
 
 .contact-icon-link:hover {
   transform: translateY(-2px);
-  background: #111;
+  opacity: 0.72;
 }
 
 .contact-icon-link svg {
-  width: 18px;
-  height: 18px;
+  width: 22px;
+  height: 22px;
   display: block;
   fill: currentColor;
 }
@@ -1796,6 +1804,13 @@ h1 {
   justify-content: space-between;
   color: #666;
   font-size: 14px;
+}
+
+.footer-disclosure {
+  margin-top: 24px;
+  font-size: 12px;
+  color: #999;
+  line-height: 1.6;
 }
 
 .footer-logo {
