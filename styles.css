@@ -59,7 +59,7 @@ button {
   z-index: 20;
   top: 24px;
   left: 50%;
-  width: 473px;
+  width: max-content;
   height: 52px;
   display: flex;
   align-items: center;
@@ -1136,6 +1136,7 @@ h1 {
 }
 
 .feature-illustration-photo {
+  display: block;
   overflow: hidden;
   border: 0;
   background: rgba(255, 255, 255, 0.42);
@@ -2717,6 +2718,52 @@ h1 {
 }
 
 @media (max-width: 1180px) {
+  .features-intro,
+  .image-features,
+  .benefits,
+  .workflow-section,
+  .pricing-section,
+  .testimonial-marquee {
+    width: min(100% - 40px, 860px);
+  }
+
+  .feature-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 56px;
+  }
+
+  .feature-panel {
+    min-height: 0;
+    padding: clamp(30px, 4vw, 44px);
+  }
+
+  .feature-panel h3,
+  .feature-panel p {
+    min-height: 0;
+  }
+
+  .feature-panel h3 {
+    max-width: 680px;
+    font-size: clamp(25px, 3.2vw, 32px);
+    line-height: 1.18;
+  }
+
+  .feature-panel p {
+    max-width: 760px;
+    margin-bottom: clamp(28px, 4vw, 40px);
+  }
+
+  .feature-illustration {
+    width: 100%;
+    height: clamp(260px, 42vw, 360px);
+    margin: 0;
+  }
+
+  .feature-illustration-photo img {
+    object-position: center bottom;
+  }
+
   .dashboard-stage {
     min-height: auto;
     padding: 0 28px 76px;
@@ -3001,6 +3048,49 @@ h1 {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
+  }
+
+  .features-intro,
+  .image-features,
+  .benefits,
+  .workflow-section,
+  .pricing-section,
+  .testimonial-marquee {
+    width: calc(100% - 24px);
+  }
+
+  .features-intro h2,
+  .image-features h2,
+  .benefits h2,
+  .pricing-section h2,
+  .testimonial-marquee h2,
+  .site-footer h2 {
+    font-size: clamp(34px, 10vw, 42px);
+    letter-spacing: -0.045em;
+  }
+
+  .feature-cards {
+    margin-top: 40px;
+  }
+
+  .feature-panel {
+    padding: 28px 22px 22px;
+    border-radius: 22px;
+  }
+
+  .feature-panel h3 {
+    font-size: 26px;
+    line-height: 1.16;
+  }
+
+  .feature-panel p {
+    margin-bottom: 26px;
+    font-size: 15px;
+  }
+
+  .feature-illustration {
+    height: clamp(220px, 58vw, 320px);
+    border-radius: 16px;
   }
 
   .hero {
