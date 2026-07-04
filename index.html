@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=capability-icons-green-20260628a" />
+    <link rel="stylesheet" href="./styles.css?v=site-20260704h" />
   </head>
   <body>
     <nav class="floating-nav" aria-label="Primary navigation">
@@ -25,9 +25,8 @@
       <a href="#why-tiance">Why Tiance</a>
       <a href="#how-it-works">How It Works</a>
       <a href="#pricing">Pricing</a>
-      <a href="https://app.tiance.io/auth/login">Login</a>
-      <a href="https://app.tiance.io/auth/register">Sign up</a>
-      <a class="button button-dark nav-cta" href="https://t.me/TIANCE_support_bot">Talk to Us</a>
+      <a href="./contact.html">Contact</a>
+      <a class="nav-login" href="./contact.html#apply">Apply</a>
       <details class="mobile-nav-disclosure">
         <summary class="nav-menu-toggle" aria-label="Open navigation menu">
           <span></span>
@@ -37,9 +36,8 @@
           <a href="#why-tiance">Why Tiance</a>
           <a href="#how-it-works">How It Works</a>
           <a href="#pricing">Pricing</a>
-          <a href="https://app.tiance.io/auth/login">Login</a>
-          <a href="https://app.tiance.io/auth/register">Sign up</a>
-          <a href="https://t.me/TIANCE_support_bot">Talk to Us</a>
+          <a href="./contact.html">Contact</a>
+          <a class="nav-login" href="./contact.html#apply">Apply</a>
         </div>
       </details>
     </nav>
@@ -58,8 +56,8 @@
           </div>
 
           <div class="hero-ctas hero-action-panel" aria-label="Contact Tiance">
-            <a class="button button-dark" href="https://t.me/TIANCE_support_bot">Apply for Review →</a>
-            <a class="button button-light" href="https://t.me/TIANCE_support_bot">Talk to Us on Telegram →</a>
+            <a class="button button-dark" href="https://t.me/TIANCE_support_bot" data-application-cta="review" data-application-source="hero">Apply for Review →</a>
+            <a class="button button-light" href="mailto:hello@tiance.io">Email Us →</a>
           </div>
         </div>
       </header>
@@ -76,57 +74,59 @@
       <section class="trust-strip">
         <p>Accepted payment methods</p>
         <div class="logos logo-marquee" aria-label="Accepted payment methods">
-          <div class="logo-track">
-            <span class="payment-logo logo-visa" aria-label="Visa">
-              <img src="./assets/payment-logos/visa-wordmark.svg" alt="" />
-            </span>
-            <span class="payment-logo logo-mastercard" aria-label="Mastercard">
-              <img src="./assets/payment-logos/mastercard-wordmark.svg" alt="" />
-              <span>Mastercard</span>
-            </span>
-            <span class="payment-logo logo-apple" aria-label="Apple Pay">
-              <img src="./assets/payment-logos/applepay-wordmark.svg" alt="" />
-            </span>
-            <span class="payment-logo logo-google" aria-label="Google Pay">
-              <img src="./assets/payment-logos/googlepay-wordmark.svg" alt="" />
-            </span>
-            <span class="payment-logo logo-wechat" aria-label="WeChat Pay">
-              <img src="./assets/payment-logos/wechat.svg" alt="" />
-              <span>Pay</span>
-            </span>
-            <span class="payment-logo logo-alipay" aria-label="Alipay">
-              <img src="./assets/payment-logos/alipay.svg" alt="" />
-            </span>
-            <span class="payment-logo logo-crypto" aria-label="Crypto and Stablecoins">
-              <img src="./assets/payment-logos/tether.svg" alt="" />
-              <span>Stablecoins</span>
-            </span>
-          </div>
-          <div class="logo-track" aria-hidden="true">
-            <span class="payment-logo logo-visa">
-              <img src="./assets/payment-logos/visa-wordmark.svg" alt="" />
-            </span>
-            <span class="payment-logo logo-mastercard">
-              <img src="./assets/payment-logos/mastercard-wordmark.svg" alt="" />
-              <span>Mastercard</span>
-            </span>
-            <span class="payment-logo logo-apple">
-              <img src="./assets/payment-logos/applepay-wordmark.svg" alt="" />
-            </span>
-            <span class="payment-logo logo-google">
-              <img src="./assets/payment-logos/googlepay-wordmark.svg" alt="" />
-            </span>
-            <span class="payment-logo logo-wechat">
-              <img src="./assets/payment-logos/wechat.svg" alt="" />
-              <span>Pay</span>
-            </span>
-            <span class="payment-logo logo-alipay">
-              <img src="./assets/payment-logos/alipay.svg" alt="" />
-            </span>
-            <span class="payment-logo logo-crypto">
-              <img src="./assets/payment-logos/tether.svg" alt="" />
-              <span>Stablecoins</span>
-            </span>
+          <div class="logo-marquee-inner">
+            <div class="logo-track">
+              <span class="payment-logo logo-visa" aria-label="Visa">
+                <img src="./assets/payment-logos/visa-wordmark.svg" alt="" />
+              </span>
+              <span class="payment-logo logo-mastercard" aria-label="Mastercard">
+                <img src="./assets/payment-logos/mastercard-wordmark.svg" alt="" />
+                <span>Mastercard</span>
+              </span>
+              <span class="payment-logo logo-apple" aria-label="Apple Pay">
+                <img src="./assets/payment-logos/applepay-wordmark.svg" alt="" />
+              </span>
+              <span class="payment-logo logo-google" aria-label="Google Pay">
+                <img src="./assets/payment-logos/googlepay-wordmark.svg" alt="" />
+              </span>
+              <span class="payment-logo logo-wechat" aria-label="WeChat Pay">
+                <img src="./assets/payment-logos/wechat.svg" alt="" />
+                <span>Pay</span>
+              </span>
+              <span class="payment-logo logo-alipay" aria-label="Alipay">
+                <img src="./assets/payment-logos/alipay.svg" alt="" />
+              </span>
+              <span class="payment-logo logo-crypto" aria-label="Crypto and Stablecoins">
+                <img src="./assets/payment-logos/tether.svg" alt="" />
+                <span>Stablecoins</span>
+              </span>
+            </div>
+            <div class="logo-track" aria-hidden="true">
+              <span class="payment-logo logo-visa">
+                <img src="./assets/payment-logos/visa-wordmark.svg" alt="" />
+              </span>
+              <span class="payment-logo logo-mastercard">
+                <img src="./assets/payment-logos/mastercard-wordmark.svg" alt="" />
+                <span>Mastercard</span>
+              </span>
+              <span class="payment-logo logo-apple">
+                <img src="./assets/payment-logos/applepay-wordmark.svg" alt="" />
+              </span>
+              <span class="payment-logo logo-google">
+                <img src="./assets/payment-logos/googlepay-wordmark.svg" alt="" />
+              </span>
+              <span class="payment-logo logo-wechat">
+                <img src="./assets/payment-logos/wechat.svg" alt="" />
+                <span>Pay</span>
+              </span>
+              <span class="payment-logo logo-alipay">
+                <img src="./assets/payment-logos/alipay.svg" alt="" />
+              </span>
+              <span class="payment-logo logo-crypto">
+                <img src="./assets/payment-logos/tether.svg" alt="" />
+                <span>Stablecoins</span>
+              </span>
+            </div>
           </div>
         </div>
       </section>
@@ -177,7 +177,7 @@
                     <p>Share your product, markets, and payment needs. A real person is available as you complete the form — and from here, you have dedicated support.</p>
                     <small class="workflow-step-time">~5 min</small>
                   </div>
-                  <a class="button button-dark workflow-step-action" href="https://t.me/TIANCE_support_bot">Apply →</a>
+                  <a class="button button-dark workflow-step-action" href="https://t.me/TIANCE_support_bot" data-application-cta="general" data-application-source="workflow">Apply →</a>
                 </li>
                 <li>
                   <span class="workflow-index">02</span>
@@ -284,8 +284,8 @@
       <section class="pricing-section reveal" id="pricing">
         <div class="section-kicker">PRICING</div>
         <h2>How pricing works.</h2>
-        <p>Fees are quoted after business review and vary by product category, transaction volume, and payment channel. A rolling reserve is standard on all accounts. Funds settle T+7 from clearance. Payout currency options are confirmed at onboarding.</p>
-        <a class="button button-dark" href="https://t.me/TIANCE_support_bot">Request a pricing estimate →</a>
+        <p>Most approved merchants pay between 8% and 15% per transaction, with no setup fee. Your exact rate depends on product category, transaction volume, and payment channel — and is confirmed in writing before activation. A rolling reserve is standard on all accounts. Funds settle T+7 from clearance. Payout currency options are confirmed at onboarding.</p>
+        <a class="button button-dark" href="https://t.me/TIANCE_support_bot" data-application-cta="pricing" data-application-source="pricing">Request a pricing estimate →</a>
       </section>
 
       <section class="quote-section reveal">
@@ -306,9 +306,12 @@
         <span class="section-kicker">Talk to Tiance</span>
         <h2>
           <span>Stripe and Creem are built for standard categories.</span>
-          <span>Doesn't fit? Let's actuallly look at your business.</span>
+          <span>Doesn't fit? Let's actually look at your business.</span>
         </h2>
-        <a class="button lime-button" href="https://t.me/TIANCE_support_bot">Talk to Us on Telegram →</a>
+        <div class="hero-ctas dark-cta-actions" aria-label="Apply or talk to Tiance">
+          <a class="button lime-button" href="https://t.me/TIANCE_support_bot" data-application-cta="review" data-application-source="footer">Apply for Review →</a>
+          <a class="button button-light" href="https://discord.gg/tiance">Talk to Us on Discord →</a>
+        </div>
       </section>
 
       <section class="testimonial-marquee reveal">
@@ -396,22 +399,22 @@
       <footer class="site-footer reveal">
         <div class="footer-top">
           <h2>Apply in 5 minutes — we review within 2 business days.</h2>
-          <a class="button lime-button" href="https://t.me/TIANCE_support_bot">Apply for Review →</a>
+          <a class="button lime-button" href="https://t.me/TIANCE_support_bot" data-application-cta="review" data-application-source="footer">Apply for Review →</a>
         </div>
         <div class="footer-links">
           <div><strong>Products</strong><a>Hosted Checkout</a><a>Payment Links</a><a>WooCommerce</a><a>API Integration</a><a>Settlement & Reporting</a></div>
           <div><strong>Solutions</strong><a>AI Web</a><a>SaaS & Digital Products</a><a>Community Sellers</a><a>Cross-Border Merchants</a></div>
-          <div><strong>Company</strong><a>Developers</a><a>Pricing</a><a>Compliance Center</a><a>Contact</a></div>
-          <div><strong>Contact</strong><a>Telegram</a><a>Discord</a><a>Apply for Review</a></div>
+          <div><strong>Company</strong><a>Developers</a><a href="#pricing">Pricing</a><a>Compliance Center</a><a href="./contact.html">Contact</a></div>
+          <div><strong>Contact</strong><a href="https://t.me/TIANCE_support_bot">Telegram</a><a href="https://discord.gg/tiance">Discord</a><a href="https://t.me/TIANCE_support_bot" data-application-cta="review" data-application-source="footer">Apply for Review</a></div>
         </div>
         <div class="footer-bottom">
-          <p>© 2026 Tiance. All rights reserved. Terms · Privacy · AUP · EN | 中文</p>
+          <p>© 2026 Tiance. All rights reserved. <a href="./terms.html">Terms</a> · <a href="./privacy.html">Privacy</a> · <a href="./aup.html">AUP</a> · EN | 中文</p>
           <div class="footer-logo"><img class="logo-image" src="./assets/logo-slanted-t.svg" alt="" /></div>
         </div>
-        <p class="footer-disclosure">Tiance provides payment integration and merchant support services. Approvals are subject to review by our payment service partners.</p>
+        <p class="footer-disclosure">Tiance is a brand of United Tycoon Group Limited, Hong Kong. Tiance provides payment integration and merchant support services. Payments are processed by our licensed payment service partners; approvals are subject to their requirements as well as ours.</p>
       </footer>
     </main>
 
-    <script src="./script.js?v=capability-icons-green-20260628a"></script>
+    <script src="./script.js?v=site-20260704i"></script>
   </body>
 </html>

@@ -9,11 +9,13 @@ This folder is the publishable public website bundle for `tiance.io`.
 It contains:
 
 - `index.html` — homepage markup and SEO metadata
+- `contact.html` — contact page and route switcher
 - `styles.css` — visual system and responsive layout
 - `script.js` — lightweight homepage interactions
+- `api/contact.js` — Vercel serverless contact form email endpoint
 - `assets/` — logo, product visuals, payment logos, and supporting imagery
 
-No backend, database, or Supabase project is required for the current homepage. Contact routing is handled through outbound links such as Telegram, Discord, and email.
+No database or Supabase project is required for the current public website. The contact form uses a Vercel serverless function with Resend when `RESEND_API_KEY` is configured; direct links still fall back to Telegram, Discord, and email.
 
 ## Recommended deployment
 
@@ -25,6 +27,21 @@ Deploy this folder as a static site through Vercel.
 - Build command: leave empty
 - Output directory: `.`
 - Install command: leave empty
+
+### Contact form environment variables
+
+Required for direct email sending:
+
+```text
+RESEND_API_KEY=...
+```
+
+Optional overrides:
+
+```text
+CONTACT_TO_EMAIL=hello@tiance.io
+CONTACT_FROM_EMAIL=TIANCE <support@tiance.io>
+```
 
 ### Domain
 
