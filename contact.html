@@ -25,31 +25,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=contact-hub-20260704g" />
-    <style>
-      .contact-page #contact-panel-apply .application-preview-card {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        justify-items: center;
-        margin: 0;
-        padding: 0;
-      }
-
-      .contact-page #contact-panel-apply .application-preview-card .button {
-        width: fit-content;
-        min-width: 230px;
-        margin-inline: auto;
-        justify-content: center;
-      }
-
-      @media (max-width: 720px) {
-        .contact-page #contact-panel-apply .application-preview-card .button {
-          width: 100%;
-          min-width: 0;
-        }
-      }
-    </style>
+    <link rel="stylesheet" href="./styles.css?v=contact-application-form-fix" />
   </head>
   <body class="contact-page">
     <nav class="floating-nav" aria-label="Primary navigation">
@@ -210,11 +186,84 @@
           <section class="contact-panel-tab contact-apply-panel" id="contact-panel-apply" role="tabpanel" data-contact-panel="apply" hidden>
             <div class="contact-panel-copy">
               <h2>Start the application when you're ready for review.</h2>
+              <p>Share enough context for a first review. We only request KYC documents after the business fit is clear.</p>
             </div>
 
-            <div class="application-preview-card">
-              <a class="button button-dark" href="/apply">Open application page →</a>
-            </div>
+            <form class="contact-form application-form" data-application-form novalidate>
+              <div class="contact-form-row">
+                <label>
+                  <span>Company / product name</span>
+                  <input name="company" autocomplete="organization" placeholder="Aurora Labs" required />
+                </label>
+                <label>
+                  <span>Website or product URL</span>
+                  <input name="website" type="url" inputmode="url" placeholder="https://example.com" required />
+                </label>
+              </div>
+
+              <div class="contact-form-row">
+                <label>
+                  <span>Applicant name</span>
+                  <input name="name" autocomplete="name" placeholder="Jane Smith" required />
+                </label>
+                <label>
+                  <span>Work email</span>
+                  <input name="email" type="email" autocomplete="email" placeholder="jane@company.com" required />
+                </label>
+              </div>
+
+              <label>
+                <span>Telegram or Discord handle</span>
+                <input name="handle" autocomplete="off" placeholder="@username or Discord ID" />
+              </label>
+
+              <fieldset>
+                <legend>Business category</legend>
+                <label><input type="radio" name="businessCategory" value="AI Software" checked /> AI software</label>
+                <label><input type="radio" name="businessCategory" value="SaaS" /> SaaS</label>
+                <label><input type="radio" name="businessCategory" value="Digital Products" /> Digital products</label>
+                <label><input type="radio" name="businessCategory" value="Cross-border Ecommerce" /> Cross-border ecommerce</label>
+                <label><input type="radio" name="businessCategory" value="Other / Not Sure" /> Other</label>
+              </fieldset>
+
+              <fieldset>
+                <legend>Current payment situation</legend>
+                <label><input type="radio" name="paymentSituation" value="No processor yet" checked /> No processor yet</label>
+                <label><input type="radio" name="paymentSituation" value="Rejected by Stripe / PayPal" /> Rejected by Stripe / PayPal</label>
+                <label><input type="radio" name="paymentSituation" value="Account frozen or funds held" /> Account frozen or held</label>
+                <label><input type="radio" name="paymentSituation" value="Looking for backup payment channel" /> Backup channel</label>
+                <label><input type="radio" name="paymentSituation" value="Requesting pricing estimate only" /> Pricing estimate</label>
+              </fieldset>
+
+              <fieldset>
+                <legend>Monthly processing volume</legend>
+                <label><input type="radio" name="monthlyVolume" value="Pre-revenue" checked /> Pre-revenue</label>
+                <label><input type="radio" name="monthlyVolume" value="Under 10k USD / month" /> Under 10k USD</label>
+                <label><input type="radio" name="monthlyVolume" value="10k-50k USD / month" /> 10k-50k USD</label>
+                <label><input type="radio" name="monthlyVolume" value="50k-250k USD / month" /> 50k-250k USD</label>
+                <label><input type="radio" name="monthlyVolume" value="250k+ USD / month" /> 250k+</label>
+              </fieldset>
+
+              <fieldset>
+                <legend>Target customer regions</legend>
+                <label><input type="checkbox" name="regions" value="US / Canada" /> US / Canada</label>
+                <label><input type="checkbox" name="regions" value="UK / EU" /> UK / EU</label>
+                <label><input type="checkbox" name="regions" value="APAC" /> APAC</label>
+                <label><input type="checkbox" name="regions" value="LATAM" /> LATAM</label>
+                <label><input type="checkbox" name="regions" value="MENA" /> MENA</label>
+                <label><input type="checkbox" name="regions" value="Global / Other" /> Global / other</label>
+              </fieldset>
+
+              <label>
+                <span>What do you need help with?</span>
+                <textarea name="message" rows="5" placeholder="Tell us your product, payment need, urgency, payout expectation, and any existing issue." required></textarea>
+              </label>
+
+              <div class="contact-form-footer">
+                <p class="contact-form-status" data-application-status aria-live="polite"></p>
+                <button class="button button-dark" type="submit">Submit Application →</button>
+              </div>
+            </form>
           </section>
         </div>
       </section>
@@ -249,7 +298,7 @@
       <footer class="site-footer reveal contact-footer">
         <div class="footer-top">
           <h2>Apply in 5 minutes - We get your stable payment collection ready within 2 days.</h2>
-          <a class="button lime-button" href="https://t.me/Amytiance" data-application-cta="review" data-application-source="footer">Apply for Review →</a>
+          <a class="button lime-button" href="./contact.html#apply" data-application-cta="review" data-application-source="footer">Apply for Review →</a>
         </div>
         <div class="footer-links">
           <div><strong>Products</strong><a>Hosted Checkout</a><a>Payment Links</a><a>WooCommerce</a><a>API Integration</a><a>Settlement & Reporting</a></div>
@@ -269,6 +318,6 @@
       window.TIANCE_APPLICATION_FORM_URL = "";
     </script>
     <script src="./analytics.js?v=site-20260709"></script>
-    <script src="./script.js?v=contact-hub-20260704g"></script>
+    <script src="./script.js?v=contact-application-form-fix"></script>
   </body>
 </html>

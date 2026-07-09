@@ -3528,7 +3528,8 @@ html[lang="en"] .faq-header h2 {
   font-weight: 560;
 }
 
-.contact-form input[type="radio"] {
+.contact-form input[type="radio"],
+.contact-form input[type="checkbox"] {
   width: 14px;
   height: 14px;
   accent-color: #9fdb69;
@@ -6734,6 +6735,7 @@ html:lang(zh-CN) .dark-cta h2 {
   .contact-page .application-preview-card .button {
     width: 100%;
   }
+
 }
 
 /* Final social contact treatment: minimal, premium, and icon-led. */
@@ -7398,5 +7400,63 @@ html:lang(zh-CN) .dark-cta h2 {
 
   .contact-page .application-preview-card .button {
     width: 100%;
+  }
+}
+
+/* Final application form route fix: keep the apply tab as a real form, not a dead /apply button. */
+.contact-page .contact-form input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: #9fdb69;
+}
+
+.contact-page #contact-panel-apply.contact-panel-tab {
+  grid-template-columns: minmax(260px, 0.62fr) minmax(0, 1.38fr);
+  align-content: stretch;
+  justify-items: stretch;
+  gap: 0;
+  padding: 0;
+}
+
+.contact-page #contact-panel-apply .contact-panel-copy {
+  width: auto;
+  display: flex;
+  justify-content: center;
+  border-right: 1px solid rgba(43, 45, 45, 0.08);
+  background:
+    linear-gradient(145deg, rgba(216, 249, 184, 0.42), rgba(255, 255, 255, 0) 52%),
+    rgba(247, 247, 244, 0.62);
+  padding: 44px;
+  text-align: left;
+}
+
+.contact-page #contact-panel-apply .contact-panel-copy h2,
+.contact-page #contact-panel-apply .contact-panel-copy p {
+  max-width: 430px;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: left;
+}
+
+.contact-page #contact-panel-apply .application-form {
+  width: 100%;
+  justify-content: start;
+  padding: 38px 44px 44px;
+}
+
+@media (max-width: 720px) {
+  .contact-page #contact-panel-apply.contact-panel-tab {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .contact-page #contact-panel-apply .contact-panel-copy {
+    border-right: 0;
+    border-bottom: 1px solid rgba(43, 45, 45, 0.08);
+    padding: 28px 22px;
+  }
+
+  .contact-page #contact-panel-apply .application-form {
+    padding: 28px 22px 32px;
   }
 }

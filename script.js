@@ -9,6 +9,8 @@ const contactTabButtons = document.querySelectorAll("[data-contact-tab]");
 const contactPanels = document.querySelectorAll("[data-contact-panel]");
 const contactForm = document.querySelector("[data-contact-form]");
 const contactStatus = document.querySelector("[data-contact-status]");
+const applicationForm = document.querySelector("[data-application-form]");
+const applicationStatus = document.querySelector("[data-application-status]");
 const contactCopyButtons = document.querySelectorAll("[data-copy]");
 const applicationModal = document.querySelector("[data-application-modal]");
 const applicationModalBody = document.querySelector("[data-application-modal-body]");
@@ -222,8 +224,8 @@ const showContactFieldError = (field, message) => {
   error.textContent = message;
 };
 
-const validateContactForm = () => {
-  const fields = Array.from(contactForm?.querySelectorAll("input[required], textarea[required]") || []);
+const validateContactForm = (form = contactForm) => {
+  const fields = Array.from(form?.querySelectorAll("input[required], textarea[required]") || []);
   let firstInvalidField;
 
   fields.forEach((field) => {
@@ -262,7 +264,7 @@ contactForm?.querySelectorAll("input, textarea").forEach((field) => {
 contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  if (!validateContactForm()) {
+  if (!validateContactForm(contactForm)) {
     if (contactStatus) {
       contactStatus.textContent = "";
     }
@@ -320,6 +322,94 @@ contactForm?.addEventListener("submit", async (event) => {
   );
   trackTianceEvent("form_submitted", {
     form_type: "contact",
+    submission_transport: "mailto",
+  });
+  window.location.href = `mailto:hello@tiance.io?subject=${subject}&body=${body}`;
+});
+
+applicationForm?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  if (!validateContactForm(applicationForm)) {
+    if (applicationStatus) {
+      applicationStatus.textContent = "";
+    }
+    return;
+  }
+
+  const formData = new FormData(applicationForm);
+  const sourceParams = new URLSearchParams(window.location.search);
+  const regions = formData.getAll("regions");
+  const payload = {
+    name: String(formData.get("name") || ""),
+    company: String(formData.get("company") || ""),
+    companyType: String(formData.get("businessCategory") || ""),
+    email: String(formData.get("email") || ""),
+    phone: String(formData.get("handle") || ""),
+    message: [
+      "TIANCE Merchant Application",
+      "",
+      `Website or product URL: ${formData.get("website") || ""}`,
+      `Business category: ${formData.get("businessCategory") || ""}`,
+      `Current payment situation: ${formData.get("paymentSituation") || ""}`,
+      `Monthly processing volume: ${formData.get("monthlyVolume") || ""}`,
+      `Target customer regions: ${regions.length ? regions.join(", ") : "Not provided"}`,
+      `Request type: ${sourceParams.get("request_type") || "Review Application"}`,
+      `Source CTA: ${sourceParams.get("source_cta") || "Contact application tab"}`,
+      `Source URL: ${sourceParams.get("source_url") || document.referrer || window.location.href}`,
+      "",
+      "What they need help with:",
+      String(formData.get("message") || ""),
+    ].join("\n"),
+  };
+  const endpoint = window.TIANCE_CONTACT_ENDPOINT || "/api/contact";
+
+  if (applicationStatus) {
+    applicationStatus.textContent = "Submitting your application...";
+  }
+
+  if (endpoint) {
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Request failed");
+      }
+
+      applicationForm.reset();
+      applicationForm.querySelectorAll("input, textarea").forEach(clearContactFieldError);
+      if (applicationStatus) {
+        applicationStatus.textContent = "Application received. We'll follow up by email.";
+      }
+      trackTianceEvent("form_submitted", {
+        form_type: "application",
+        submission_transport: "api",
+      });
+      return;
+    } catch {
+      if (applicationStatus) {
+        applicationStatus.textContent = "Direct send is unavailable. Opening your email app instead.";
+      }
+    }
+  }
+
+  const subject = encodeURIComponent(`TIANCE merchant application from ${payload.company || payload.name}`);
+  const body = encodeURIComponent(
+    [
+      `Name: ${payload.name}`,
+      `Company: ${payload.company}`,
+      `Email: ${payload.email}`,
+      `Telegram / Discord: ${payload.phone}`,
+      "",
+      payload.message,
+    ].join("\n")
+  );
+  trackTianceEvent("form_submitted", {
+    form_type: "application",
     submission_transport: "mailto",
   });
   window.location.href = `mailto:hello@tiance.io?subject=${subject}&body=${body}`;
