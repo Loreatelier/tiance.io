@@ -3,18 +3,80 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tiance — Cross-border payment services for AI products and digital merchants</title>
+    <title>Tiance | Cross-Border Payments for AI & Digital Products</title>
     <meta
       name="description"
-      content="Denied by an algorithm? Tiance reviews your business — and you can talk to us about it. Cross-border payment collection for AI developers, SaaS founders, and digital merchants."
+      content="Tiance helps AI developers, SaaS founders, and digital merchants accept cross-border payments with upfront review, stable accounts, checkout, and settlement."
     />
+    <link rel="canonical" href="https://tiance.io/" />
+    <link rel="alternate" hreflang="en" href="https://tiance.io/" />
+    <link rel="alternate" hreflang="zh-CN" href="https://tiance.io/zh/" />
+    <link rel="alternate" hreflang="x-default" href="https://tiance.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tiance" />
+    <meta property="og:title" content="Tiance | Cross-Border Payments for AI & Digital Products" />
+    <meta property="og:description" content="Cross-border payment services for AI developers, SaaS founders, and digital merchants who need upfront review, stable accounts, checkout, and settlement support." />
+    <meta property="og:url" content="https://tiance.io/" />
+    <meta property="og:image" content="https://tiance.io/assets/hero-product.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tiance | Cross-Border Payments for AI & Digital Products" />
+    <meta name="twitter:description" content="Cross-border payment services for AI developers, SaaS founders, and digital merchants." />
+    <meta name="twitter:image" content="https://tiance.io/assets/hero-product.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=site-20260704h" />
+    <link rel="stylesheet" href="./styles.css?v=site-20260709-faq-polish" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://tiance.io/#organization",
+            "name": "Tiance",
+            "url": "https://tiance.io/",
+            "logo": "https://tiance.io/assets/logo.jpg",
+            "legalName": "United Tycoon Group Limited",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Hong Kong",
+              "addressCountry": "HK"
+            },
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "merchant support",
+              "email": "hello@tiance.io",
+              "availableLanguage": ["English", "Chinese"]
+            },
+            "sameAs": ["https://t.me/Amytiance", "https://discord.gg/tiance"]
+          },
+          {
+            "@type": "Service",
+            "@id": "https://tiance.io/#service",
+            "name": "Cross-border payment services for AI products and digital merchants",
+            "serviceType": "Cross-border payment integration and merchant support",
+            "provider": { "@id": "https://tiance.io/#organization" },
+            "areaServed": "Worldwide",
+            "audience": {
+              "@type": "Audience",
+              "audienceType": "AI developers, SaaS founders, digital merchants, and cross-border merchants"
+            },
+            "description": "Tiance provides upfront business review, checkout and API setup, payment links, multi-currency settlement, chargeback support, and merchant account support for AI products and digital merchants."
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://tiance.io/#website",
+            "name": "Tiance",
+            "url": "https://tiance.io/",
+            "publisher": { "@id": "https://tiance.io/#organization" },
+            "inLanguage": "en"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <nav class="floating-nav" aria-label="Primary navigation">
@@ -26,7 +88,10 @@
       <a href="#how-it-works">How It Works</a>
       <a href="#pricing">Pricing</a>
       <a href="./contact.html">Contact</a>
-      <a class="nav-login" href="/apply">Apply</a>
+      <a class="language-toggle" href="./zh/" aria-label="Switch to Chinese" data-locale-choice="zh">
+        <span>中文</span>
+      </a>
+      <a class="nav-login" href="./contact.html#apply">Apply</a>
       <details class="mobile-nav-disclosure">
         <summary class="nav-menu-toggle" aria-label="Open navigation menu">
           <span></span>
@@ -37,7 +102,8 @@
           <a href="#how-it-works">How It Works</a>
           <a href="#pricing">Pricing</a>
           <a href="./contact.html">Contact</a>
-          <a class="nav-login" href="/apply">Apply</a>
+          <a class="mobile-language-toggle" href="./zh/" aria-label="Switch to Chinese" data-locale-choice="zh">中文</a>
+          <a class="nav-login" href="./contact.html#apply">Apply</a>
         </div>
       </details>
     </nav>
@@ -56,7 +122,7 @@
           </div>
 
           <div class="hero-ctas hero-action-panel" aria-label="Contact Tiance">
-            <a class="button button-dark" href="https://t.me/TIANCE_support_bot" data-application-cta="review" data-application-source="hero">Apply for Review →</a>
+            <a class="button button-dark" href="https://t.me/Amytiance" data-application-cta="review" data-application-source="hero">Apply to Start →</a>
             <a class="button button-light" href="mailto:hello@tiance.io">Email Us →</a>
           </div>
         </div>
@@ -162,8 +228,8 @@
       <section class="workflow-section reveal" id="how-it-works">
         <div class="workflow-header">
           <span class="section-kicker">HOW TIANCE WORKS</span>
-          <h2>Apply once. Live in days.</h2>
-          <p>Business review, payment setup, and go-live — a defined sequence with no surprises at any stage.</p>
+          <h2>From application to launch, ready in as fast as 3 days.</h2>
+          <p>Share your needs, align on the business, configure payments, and go live — with a real person following each step.</p>
         </div>
 
         <div class="workflow-board workflow-board-human">
@@ -173,26 +239,26 @@
                 <li class="is-active">
                   <span class="workflow-index">01</span>
                   <div class="workflow-step-copy">
-                    <h3>Apply for Review</h3>
+                    <h3>Apply to Start</h3>
                     <p>Share your product, markets, and payment needs. A real person is available as you complete the form — and from here, you have dedicated support.</p>
                     <small class="workflow-step-time">~5 min</small>
                   </div>
-                  <a class="button button-dark workflow-step-action" href="https://t.me/TIANCE_support_bot" data-application-cta="general" data-application-source="workflow">Apply →</a>
+                  <a class="button button-dark workflow-step-action" href="https://t.me/Amytiance" data-application-cta="general" data-application-source="workflow">Apply →</a>
                 </li>
                 <li>
                   <span class="workflow-index">02</span>
                   <div class="workflow-step-copy">
                     <h3>Business Review</h3>
                     <p>A real person reviews your product, customers, region, and risk profile — not just the category code.</p>
-                    <small class="workflow-step-time">1–2 business days</small>
+                    <small class="workflow-step-time">1-3 days</small>
                   </div>
                 </li>
                 <li>
                   <span class="workflow-index">03</span>
                   <div class="workflow-step-copy">
                     <h3>Payment Setup</h3>
-                    <p>Your API keys, installation SKU, and test and live accounts are released — with setup instructions to get your checkout or integration live quickly.</p>
-                    <small class="workflow-step-time">1–2 business days</small>
+                    <p>Your API keys, installation Skills, and test and live accounts are released — with setup instructions to get your checkout or integration live quickly.</p>
+                    <small class="workflow-step-time">15 minutes</small>
                   </div>
                 </li>
                 <li>
@@ -210,7 +276,7 @@
                   <span>Reach out on Telegram or Discord — before you apply, during review, or anytime after you're live.</span>
                 </div>
                 <div class="support-actions" aria-label="Human support contact channels">
-                  <a href="https://t.me/TIANCE_support_bot" aria-label="Contact Tiance on Telegram">
+                  <a href="https://t.me/Amytiance" aria-label="Contact Tiance on Telegram">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
                       <path d="M20.7 4.4 3.9 10.9c-1.1.4-1.1 1.1-.2 1.4l4.3 1.3 1.7 5.2c.2.6.5.7 1 .3l2.5-2.4 4.4 3.2c.8.4 1.3.2 1.5-.8l2.7-12.9c.3-1.2-.4-1.7-1.1-1.4ZM8.7 13.2l9.4-5.9c.4-.2.8-.1.5.2l-7.6 6.9-.3 3.1-1.4-4.2Z" />
                     </svg>
@@ -236,7 +302,7 @@
         <div class="capabilities-showcase-inner">
           <div class="capabilities-showcase-header">
             <div class="section-kicker">CAPABILITIES</div>
-            <h2>From first payment to final settlement.</h2>
+            <h2>More than payments: account stability and settlement, handled together.</h2>
             <p>Everything you need to collect internationally, protect your account, and get paid — without stitching together multiple providers.</p>
           </div>
 
@@ -285,18 +351,18 @@
         <div class="section-kicker">PRICING</div>
         <h2>How pricing works.</h2>
         <p>Most approved merchants pay between 8% and 15% per transaction, with no setup fee. Your exact rate depends on product category, transaction volume, and payment channel — and is confirmed in writing before activation. A rolling reserve is standard on all accounts. Funds settle T+7 from clearance. Payout currency options are confirmed at onboarding.</p>
-        <a class="button button-dark" href="https://t.me/TIANCE_support_bot" data-application-cta="pricing" data-application-source="pricing">Request a pricing estimate →</a>
+        <a class="button button-dark" href="https://t.me/Amytiance" data-application-cta="pricing" data-application-source="pricing">Request a pricing estimate →</a>
       </section>
 
       <section class="quote-section reveal">
         <img src="./assets/why-tiance-office.jpg" alt="Two Tiance operators working together in a bright office" />
         <div>
-          <h2>Why Tiance exists.</h2>
-          <p>We built these channels as operators, not as a startup. For years, we ran cross-border businesses — and the payment infrastructure we rely on today started as our own internal stack, built because we needed it to actually work.</p>
+          <h2>Proven in Operation, Before It Was a Product</h2>
+          <p>Tiance did not start as a product built for sale. It began as internal payment infrastructure, built to move money for our own cross-border businesses across multiple markets, currencies, and channels. It was shaped by real transaction volume and the settlement pressure that comes with running live operations — not by a specification written in advance. Only after it held up under those conditions did we open it to AI products, digital products, and cross-border merchants that need collection to simply work.</p>
           <p>When the AI boom took off, we watched developer friends run into a wall we already knew. Products rejected. Accounts frozen. No conversation, no appeal. They were building legitimate businesses that mainstream gateways couldn't categorise.</p>
           <p>We already had the channels. We opened them up.</p>
-          <p>That's what Tiance is: a payment integration and service provider, built by operators — connecting AI and digital businesses with suitable payment channels after upfront review.</p>
-          <p>Payments processed by our licensed payment service partners. Merchant approvals reflect their requirements as well as ours.</p>
+          <p>That's what Tiance is: a payment integration and merchant support service shaped in real cross-border operations — connecting AI and digital businesses with suitable payment channels after we understand the product, customer experience, and business model.</p>
+          <p>Payments are processed by our licensed payment service partners. Merchant access depends on their requirements as well as ours.</p>
           <span>— The Tiance founding team</span>
         </div>
       </section>
@@ -309,7 +375,7 @@
           <span>Doesn't fit? Let's actually look at your business.</span>
         </h2>
         <div class="hero-ctas dark-cta-actions" aria-label="Apply or talk to Tiance">
-          <a class="button lime-button" href="https://t.me/TIANCE_support_bot" data-application-cta="review" data-application-source="footer">Apply for Review →</a>
+          <a class="button lime-button" href="https://t.me/Amytiance" data-application-cta="review" data-application-source="footer">Apply to Start →</a>
           <a class="button button-light" href="https://discord.gg/tiance">Talk to Us on Discord →</a>
         </div>
       </section>
@@ -367,48 +433,67 @@
               <b>Live</b>
             </div>
           </article>
-          <!-- Duplicate set for seamless infinite loop -->
-          <article class="review-card" aria-hidden="true">
-            <div class="review-stars">★★★★★</div>
-            <p>"We got rejected by Stripe and Creem before Tiance. They actually looked at our product, discussed our business, and approved us in a week."</p>
-            <div class="review-person"><span class="review-avatar" aria-hidden="true"><img src="./assets/testimonials/kevin-zhang.jpg" alt="" loading="lazy" /></span><span><strong>Kevin Zhang</strong><em>AI Web Founder</em></span><small>Singapore</small><b>Live</b></div>
-          </article>
-          <article class="review-card" aria-hidden="true">
-            <div class="review-stars">★★★★★</div>
-            <p>"The review wasn't a wall — it was a conversation. They asked questions, we explained, and it worked."</p>
-            <div class="review-person"><span class="review-avatar" aria-hidden="true"><img src="./assets/testimonials/maria-santos.jpg" alt="" loading="lazy" /></span><span><strong>Maria Santos</strong><em>SaaS Founder</em></span><small>Spain</small><b>Live</b></div>
-          </article>
-          <article class="review-card" aria-hidden="true">
-            <div class="review-stars">★★★★★</div>
-            <p>"We run fan spaces on Telegram and Discord. With Tiance's payment features built in, we do community payments directly — seamless experience, better retention and repeat purchases."</p>
-            <div class="review-person"><span class="review-avatar" aria-hidden="true"><img src="./assets/testimonials/marcus-webb.jpg" alt="" loading="lazy" /></span><span><strong>Marcus Webb</strong><em>Community Seller</em></span><small>United States</small><b>Live</b></div>
-          </article>
-          <article class="review-card" aria-hidden="true">
-            <div class="review-stars">★★★★★</div>
-            <p>"Other platforms froze our account with no notice — shut down after six months. Tiance reviewed us before we went live, and we've been in close communication throughout."</p>
-            <div class="review-person"><span class="review-avatar" aria-hidden="true"><img src="./assets/testimonials/anna-petrova.jpg" alt="" loading="lazy" /></span><span><strong>Anna Petrova</strong><em>Digital Products</em></span><small>Germany</small><b>Live</b></div>
-          </article>
-          <article class="review-card" aria-hidden="true">
-            <div class="review-stars">★★★★★</div>
-            <p>"Paddle rejected our image generation tool at launch — policy update, no conversation. Tiance reviewed our product directly and had us live in four days."</p>
-            <div class="review-person"><span class="review-avatar" aria-hidden="true"><img src="./assets/testimonials/daniel-kim.jpg" alt="" loading="lazy" /></span><span><strong>Daniel Kim</strong><em>AI Developer</em></span><small>South Korea</small><b>Live</b></div>
-          </article>
+        </div>
+      </section>
+
+      <section class="faq-section reveal" id="faqs">
+        <div class="faq-header">
+          <div class="section-kicker">FAQ</div>
+          <h2>Questions merchants ask before they apply</h2>
+        </div>
+        <div class="faq-list">
+          <details open>
+            <summary>Stripe, Creem, or PayPal rejected me without even asking questions. Will the same thing happen here?</summary>
+            <p>Auto-rejection is common if you sell AI tools, digital products, or run a community platform — risk systems often decline on category alone, before anyone looks at what you actually sell. We review manually: product, checkout flow, pricing, refund policy, delivery model. That doesn't guarantee approval. It means the decision is based on your business, not a merchant category code.</p>
+          </details>
+          <details>
+            <summary>What exactly do you look at before approving an account?</summary>
+            <p>Your website, checkout flow, target markets, expected volume, payment methods, support process, and dispute exposure — the same information any processor should want before taking you on. We just ask upfront, before a chargeback spike forces the conversation.</p>
+          </details>
+          <details>
+            <summary>I sell AI-generated images or AI writing tools — is that too risky for you?</summary>
+            <p>Not automatically. AI products fall outside standard category codes, which is exactly the gap we work in. We look at your delivery model, refund policy, and how customers actually use the product — not the label on the box.</p>
+          </details>
+          <details>
+            <summary>How long does the review take?</summary>
+            <p>It depends on complexity. A straightforward SaaS subscription clears faster than a multi-market community payment setup. If something in your application needs fixing first, we tell you early instead of leaving you waiting on a decision that was never coming.</p>
+          </details>
+          <details>
+            <summary>Does approval mean I just get a merchant account and that's it?</summary>
+            <p>No — approval is the start. Once you're live, you get hosted checkout, payment links, Shopify and WooCommerce integration, a REST API for custom builds, AI usage billing, community payments, multi-currency settlement, and chargeback alerts.</p>
+          </details>
+          <details>
+            <summary>Can I use this with Shopify or WooCommerce, or do I need to rebuild my checkout?</summary>
+            <p>Both paths work. Already on Shopify or WooCommerce? We integrate with what you have. Need something custom — usage-based billing for an AI product, payments inside a Telegram or Discord community? REST API and payment links cover that too.</p>
+          </details>
+          <details>
+            <summary>My business doesn't fit a normal category code. Is that a problem?</summary>
+            <p>That's most of who we work with. Category codes were never built for AI usage billing, paid Discord communities, or cross-border digital subscriptions — which is usually why a standard processor declines without a real look. We evaluate what the business does, not which code it's supposed to fit.</p>
+          </details>
+          <details>
+            <summary>Am I setting this up myself, or do I work with an actual person?</summary>
+            <p>A real operator, not a support ticket queue. The person who reviews your application stays on through go-live, settlement, disputes, and any account changes after.</p>
+          </details>
+          <details>
+            <summary>What happens if my dispute rate rises or something changes later — will my account just get shut down?</summary>
+            <p>We can't promise nothing ever changes — payment risk moves. What we can promise is how you hear about it: if your dispute rate rises or something needs attention, a person tells you, with time to respond, instead of a frozen account telling you first.</p>
+          </details>
         </div>
       </section>
 
       <footer class="site-footer reveal">
         <div class="footer-top">
-          <h2>Apply in 5 minutes — we review within 2 business days.</h2>
-          <a class="button lime-button" href="https://t.me/TIANCE_support_bot" data-application-cta="review" data-application-source="footer">Apply for Review →</a>
+          <h2>Apply in 5 minutes - We get your stable payment collection ready within 3 days.</h2>
+          <a class="button lime-button" href="https://t.me/Amytiance" data-application-cta="review" data-application-source="footer">Apply to Start →</a>
         </div>
         <div class="footer-links">
           <div><strong>Products</strong><a>Hosted Checkout</a><a>Payment Links</a><a>WooCommerce</a><a>API Integration</a><a>Settlement & Reporting</a></div>
           <div><strong>Solutions</strong><a>AI Web</a><a>SaaS & Digital Products</a><a>Community Sellers</a><a>Cross-Border Merchants</a></div>
           <div><strong>Company</strong><a>Developers</a><a href="#pricing">Pricing</a><a>Compliance Center</a><a href="./contact.html">Contact</a></div>
-          <div><strong>Contact</strong><a href="https://t.me/TIANCE_support_bot">Telegram</a><a href="https://discord.gg/tiance">Discord</a><a href="https://t.me/TIANCE_support_bot" data-application-cta="review" data-application-source="footer">Apply for Review</a></div>
+          <div><strong>Contact</strong><a href="https://t.me/Amytiance">Telegram</a><a href="https://discord.gg/tiance">Discord</a><a href="https://t.me/Amytiance" data-application-cta="review" data-application-source="footer">Apply to Start</a></div>
         </div>
         <div class="footer-bottom">
-          <p>© 2026 Tiance. All rights reserved. <a href="./terms.html">Terms</a> · <a href="./privacy.html">Privacy</a> · <a href="./aup.html">AUP</a> · EN | 中文</p>
+          <p>© 2026 Tiance. All rights reserved. <a href="./terms.html">Terms</a> · <a href="./privacy.html">Privacy</a> · <a href="./aup.html">AUP</a> · <a class="footer-language-toggle" href="./zh/" data-locale-choice="zh">中文</a></p>
           <div class="footer-logo"><img class="logo-image" src="./assets/logo-slanted-t.svg" alt="" /></div>
         </div>
         <p class="footer-disclosure">Tiance is a brand of United Tycoon Group Limited, Hong Kong. Tiance provides payment integration and merchant support services. Payments are processed by our licensed payment service partners; approvals are subject to their requirements as well as ours.</p>
@@ -416,8 +501,9 @@
     </main>
 
     <script>
-      window.TIANCE_APPLICATION_FORM_URL = "/apply";
+      window.TIANCE_APPLICATION_FORM_URL = "./contact.html#apply";
     </script>
-    <script src="./script.js?v=site-20260704j"></script>
+    <script src="./analytics.js?v=site-20260709"></script>
+    <script src="./script.js?v=site-20260709-faq-polish"></script>
   </body>
 </html>

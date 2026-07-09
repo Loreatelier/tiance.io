@@ -9,10 +9,14 @@ const contactTabButtons = document.querySelectorAll("[data-contact-tab]");
 const contactPanels = document.querySelectorAll("[data-contact-panel]");
 const contactForm = document.querySelector("[data-contact-form]");
 const contactStatus = document.querySelector("[data-contact-status]");
+const contactCopyButtons = document.querySelectorAll("[data-copy]");
 const applicationModal = document.querySelector("[data-application-modal]");
 const applicationModalBody = document.querySelector("[data-application-modal-body]");
 const applicationModalOpen = document.querySelector("[data-application-modal-open]");
 const applicationModalClose = document.querySelector("[data-application-modal-close]");
+const testimonialTrack = document.querySelector(".testimonial-track");
+const faqDetails = document.querySelectorAll(".faq-list details");
+const localeChoiceLinks = document.querySelectorAll("[data-locale-choice]");
 
 const requestTypeByCta = {
   review: "Review Application",
@@ -25,6 +29,21 @@ const sourceByCta = {
   workflow: "Workflow Apply",
   pricing: "Pricing Estimate",
   footer: "Footer Apply for Review",
+};
+
+localeChoiceLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    const locale = link.dataset.localeChoice;
+    if (locale === "en" || locale === "zh") {
+      document.cookie = `tiance_locale=${locale}; Max-Age=31536000; Path=/; SameSite=Lax`;
+    }
+  });
+});
+
+const trackTianceEvent = (eventName, properties = {}) => {
+  if (typeof window.tianceTrack === "function") {
+    window.tianceTrack(eventName, properties);
+  }
 };
 
 const applicationFormUrl = window.TIANCE_APPLICATION_FORM_URL;
@@ -53,6 +72,7 @@ if (applicationFormUrl) {
 contactTabButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const activeTab = button.dataset.contactTab;
+    trackTianceEvent("contact_tab_selected", { tab_name: activeTab });
 
     contactTabButtons.forEach((item) => {
       const isActive = item === button;
@@ -64,6 +84,18 @@ contactTabButtons.forEach((button) => {
       const isActive = panel.dataset.contactPanel === activeTab;
       panel.classList.toggle("is-active", isActive);
       panel.hidden = !isActive;
+    });
+  });
+});
+
+faqDetails.forEach((detail) => {
+  detail.addEventListener("toggle", () => {
+    if (!detail.open) return;
+
+    faqDetails.forEach((item) => {
+      if (item !== detail) {
+        item.open = false;
+      }
     });
   });
 });
@@ -96,6 +128,50 @@ window.addEventListener("hashchange", () => {
   if (window.location.hash === "#apply") {
     openContactTab("apply");
   }
+});
+
+const copyText = async (value) => {
+  if (navigator.clipboard?.writeText) {
+    await navigator.clipboard.writeText(value);
+    return;
+  }
+
+  const textarea = document.createElement("textarea");
+  textarea.value = value;
+  textarea.setAttribute("readonly", "");
+  textarea.style.position = "fixed";
+  textarea.style.top = "-999px";
+  document.body.append(textarea);
+  textarea.select();
+  document.execCommand("copy");
+  textarea.remove();
+};
+
+contactCopyButtons.forEach((button) => {
+  const defaultLabel = button.getAttribute("aria-label") || "Copy";
+
+  button.addEventListener("click", async () => {
+    const value = button.dataset.copy;
+
+    if (!value) {
+      return;
+    }
+
+    try {
+      await copyText(value);
+      button.classList.add("is-copied");
+      button.setAttribute("aria-label", "Copied");
+      window.setTimeout(() => {
+        button.classList.remove("is-copied");
+        button.setAttribute("aria-label", defaultLabel);
+      }, 1400);
+    } catch {
+      button.setAttribute("aria-label", "Copy failed");
+      window.setTimeout(() => {
+        button.setAttribute("aria-label", defaultLabel);
+      }, 1400);
+    }
+  });
 });
 
 const getContactFieldLabel = (field) => field.closest("label")?.querySelector("span")?.textContent?.trim() || "This field";
@@ -218,6 +294,10 @@ contactForm?.addEventListener("submit", async (event) => {
       if (contactStatus) {
         contactStatus.textContent = "Message sent. We'll follow up by email.";
       }
+      trackTianceEvent("form_submitted", {
+        form_type: "contact",
+        submission_transport: "api",
+      });
       return;
     } catch {
       if (contactStatus) {
@@ -238,6 +318,10 @@ contactForm?.addEventListener("submit", async (event) => {
       payload.message || "",
     ].join("\n")
   );
+  trackTianceEvent("form_submitted", {
+    form_type: "contact",
+    submission_transport: "mailto",
+  });
   window.location.href = `mailto:hello@tiance.io?subject=${subject}&body=${body}`;
 });
 
@@ -250,6 +334,9 @@ if (applicationFormUrl && applicationModalBody) {
 }
 
 applicationModalOpen?.addEventListener("click", () => {
+  trackTianceEvent("application_modal_opened", {
+    source: "contact_apply_panel",
+  });
   if (typeof applicationModal?.showModal === "function") {
     applicationModal.showModal();
   }
@@ -274,13 +361,27 @@ const setMobileMenu = (isOpen) => {
   if (mobileNavDisclosure) {
     mobileNavDisclosure.open = isOpen;
   }
-  navMenuToggle?.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+  const label = isOpen
+    ? activeLocale === "zh"
+      ? "关闭导航菜单"
+      : "Close navigation menu"
+    : activeLocale === "zh"
+      ? "打开导航菜单"
+      : "Open navigation menu";
+  navMenuToggle?.setAttribute("aria-label", label);
 };
 
 mobileNavDisclosure?.addEventListener("toggle", () => {
   const isOpen = mobileNavDisclosure.open;
   nav?.classList.toggle("is-menu-open", isOpen);
-  navMenuToggle?.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
+  const label = isOpen
+    ? activeLocale === "zh"
+      ? "关闭导航菜单"
+      : "Close navigation menu"
+    : activeLocale === "zh"
+      ? "打开导航菜单"
+      : "Open navigation menu";
+  navMenuToggle?.setAttribute("aria-label", label);
 });
 
 mobileNavMenu?.addEventListener("click", (event) => {
@@ -332,3 +433,13 @@ videoButton?.addEventListener("click", () => {
     { duration: 220, easing: "ease-out" }
   );
 });
+
+if (testimonialTrack && !testimonialTrack.dataset.cloned) {
+  const testimonialCards = Array.from(testimonialTrack.children);
+  testimonialCards.forEach((card) => {
+    const clone = card.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    testimonialTrack.append(clone);
+  });
+  testimonialTrack.dataset.cloned = "true";
+}

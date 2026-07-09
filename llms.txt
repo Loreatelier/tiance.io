@@ -1,0 +1,20 @@
+# Tiance
+
+Tiance provides cross-border payment integration and merchant support services for AI developers, SaaS founders, digital merchants, community sellers, and cross-border merchants.
+
+## Primary Pages
+
+- Homepage: https://tiance.io/
+- Chinese homepage: https://tiance.io/zh/
+- Contact and application: https://tiance.io/contact.html
+
+## Core Services
+
+- Upfront business and product review before payment activation
+- Hosted checkout, payment links, WooCommerce, Shopify, and REST API support
+- Cross-border payment collection for AI products, SaaS, digital products, and community commerce
+- Multi-currency settlement, chargeback support, account support, and merchant communication
+
+## Company
+
+Tiance is a brand of United Tycoon Group Limited, Hong Kong. Tiance provides payment integration and merchant support services. Payments are processed by licensed payment service partners, and merchant approval is subject to partner requirements as well as Tiance review.

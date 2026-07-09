@@ -1,28 +1,13 @@
 {
+  "buildCommand": "node scripts/predeploy-check.js",
   "rewrites": [
     {
       "source": "/apply",
-      "destination": "https://app-tiance-io.vercel.app/apply"
+      "destination": "/apply.html"
     },
     {
       "source": "/apply/:path*",
-      "destination": "https://app-tiance-io.vercel.app/apply/:path*"
-    },
-    {
-      "source": "/_next/:path*",
-      "destination": "https://app-tiance-io.vercel.app/_next/:path*"
-    },
-    {
-      "source": "/api/applications/:path*",
-      "destination": "https://app-tiance-io.vercel.app/api/applications/:path*"
-    },
-    {
-      "source": "/api/auth/:path*",
-      "destination": "https://app-tiance-io.vercel.app/api/auth/:path*"
-    },
-    {
-      "source": "/auth/:path*",
-      "destination": "https://app-tiance-io.vercel.app/auth/:path*"
+      "destination": "/apply.html"
     }
   ]
 }

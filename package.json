@@ -1,0 +1,7 @@
+{
+  "private": true,
+  "scripts": {
+    "verify": "node scripts/predeploy-check.js",
+    "predeploy": "node scripts/predeploy-check.js"
+  }
+}

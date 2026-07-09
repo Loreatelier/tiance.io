@@ -8,13 +8,48 @@
       name="description"
       content="Contact Tiance for payment review, pricing, account questions, chargebacks, settlement, and integration support."
     />
+    <link rel="canonical" href="https://tiance.io/contact.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tiance" />
+    <meta property="og:title" content="Contact Tiance | Talk to a real payment operator" />
+    <meta property="og:description" content="Contact Tiance for payment review, pricing, account questions, chargebacks, settlement, and integration support." />
+    <meta property="og:url" content="https://tiance.io/contact.html" />
+    <meta property="og:image" content="https://tiance.io/assets/contact/contact-hero-team.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Contact Tiance | Talk to a real payment operator" />
+    <meta name="twitter:description" content="Contact Tiance for payment review, pricing, account questions, chargebacks, settlement, and integration support." />
+    <meta name="twitter:image" content="https://tiance.io/assets/contact/contact-hero-team.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=contact-hub-20260704e" />
+    <link rel="stylesheet" href="./styles.css?v=contact-hub-20260704g" />
+    <style>
+      .contact-page #contact-panel-apply .application-preview-card {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        margin: 0;
+        padding: 0;
+      }
+
+      .contact-page #contact-panel-apply .application-preview-card .button {
+        width: fit-content;
+        min-width: 230px;
+        margin-inline: auto;
+        justify-content: center;
+      }
+
+      @media (max-width: 720px) {
+        .contact-page #contact-panel-apply .application-preview-card .button {
+          width: 100%;
+          min-width: 0;
+        }
+      }
+    </style>
   </head>
   <body class="contact-page">
     <nav class="floating-nav" aria-label="Primary navigation">
@@ -26,7 +61,7 @@
       <a href="./index.html#how-it-works">How It Works</a>
       <a href="./index.html#pricing">Pricing</a>
       <a class="nav-current" href="./contact.html" aria-current="page">Contact</a>
-      <a class="nav-login" href="/apply">Apply</a>
+      <a class="nav-login" href="./contact.html#apply">Apply</a>
       <details class="mobile-nav-disclosure">
         <summary class="nav-menu-toggle" aria-label="Open navigation menu">
           <span></span>
@@ -37,7 +72,7 @@
           <a href="./index.html#how-it-works">How It Works</a>
           <a href="./index.html#pricing">Pricing</a>
           <a class="nav-current" href="./contact.html" aria-current="page">Contact</a>
-          <a class="nav-login" href="/apply">Apply</a>
+          <a class="nav-login" href="./contact.html#apply">Apply</a>
         </div>
       </details>
     </nav>
@@ -113,82 +148,72 @@
             </form>
           </section>
 
-          <section class="contact-panel-tab" id="contact-panel-talk" role="tabpanel" data-contact-panel="talk" hidden>
+          <section class="contact-panel-tab contact-talk-panel" id="contact-panel-talk" role="tabpanel" data-contact-panel="talk" hidden>
             <div class="contact-panel-copy">
               <h2>Need a faster conversation?</h2>
             </div>
 
-            <div class="contact-social-card" aria-label="Social links">
-              <div class="contact-social-row contact-email-row">
-                <a class="contact-email-link" href="mailto:hello@tiance.io" aria-label="Email Tiance at hello@tiance.io">
-                  <span class="contact-social-icon" aria-hidden="true">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M4.8 6.5h14.4c.9 0 1.6.7 1.6 1.6v7.8c0 .9-.7 1.6-1.6 1.6H4.8c-.9 0-1.6-.7-1.6-1.6V8.1c0-.9.7-1.6 1.6-1.6Zm.6 2.3v.1l6.6 4.3 6.6-4.3v-.1H5.4Zm13.2 2.4-5.8 3.7a1.5 1.5 0 0 1-1.6 0l-5.8-3.7v4h13.2v-4Z" />
-                    </svg>
-                  </span>
-                  <span>hello@tiance.io</span>
-                </a>
-              </div>
-              <div class="contact-social-row contact-social-main">
-                <h3>Social Contact</h3>
-                <div class="contact-social-actions">
-                  <a href="https://discord.gg/tiance" aria-label="Open Discord">
-                    <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M8.2 7.4c2.5-.8 5.1-.8 7.6 0l.5.9c1.2.2 2.3.6 3.3 1.2.8 2.9.6 5.6-.7 8.1-1.3.9-2.6 1.4-4 1.7l-.9-1.4c.5-.2 1-.4 1.5-.7-2.3.7-4.7.7-7 0 .5.3 1 .5 1.5.7l-.9 1.4c-1.4-.3-2.7-.9-4-1.7-1.3-2.5-1.5-5.2-.7-8.1 1-.6 2.1-1 3.3-1.2l.5-.9Zm1.5 6.7c.7 0 1.2-.6 1.2-1.3s-.5-1.3-1.2-1.3-1.2.6-1.2 1.3.5 1.3 1.2 1.3Zm4.6 0c.7 0 1.2-.6 1.2-1.3s-.5-1.3-1.2-1.3-1.2.6-1.2 1.3.5 1.3 1.2 1.3Z" />
-                    </svg>
+            <div class="contact-social-card" aria-label="Talk to us">
+              <div class="contact-social-actions">
+                <div class="contact-social-item">
+                  <a class="contact-social-link" href="mailto:hello@tiance.io" target="_blank" rel="noopener noreferrer" aria-label="Email Tiance at hello@tiance.io">
+                    <span class="contact-social-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M4.8 6.5h14.4c.9 0 1.6.7 1.6 1.6v7.8c0 .9-.7 1.6-1.6 1.6H4.8c-.9 0-1.6-.7-1.6-1.6V8.1c0-.9.7-1.6 1.6-1.6Zm.6 2.3v.1l6.6 4.3 6.6-4.3v-.1H5.4Zm13.2 2.4-5.8 3.7a1.5 1.5 0 0 1-1.6 0l-5.8-3.7v4h13.2v-4Z" />
+                      </svg>
+                    </span>
+                    <span class="contact-social-separator" aria-hidden="true">:</span>
+                    <span class="contact-social-value">hello@tiance.io</span>
                   </a>
-                  <a href="https://t.me/TIANCE_support_bot" aria-label="Open Telegram">
+                  <button class="contact-copy-button" type="button" data-copy="hello@tiance.io" aria-label="Copy email address">
                     <svg viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M20.7 4.4 3.9 10.9c-1.1.4-1.1 1.1-.2 1.4l4.3 1.3 1.7 5.2c.2.6.5.7 1 .3l2.5-2.4 4.4 3.2c.8.4 1.3.2 1.5-.8l2.7-12.9c.3-1.2-.4-1.7-1.1-1.4ZM8.7 13.2l9.4-5.9c.4-.2.8-.1.5.2l-7.6 6.9-.3 3.1-1.4-4.2Z" />
+                      <path d="M8 7.2c0-1.2 1-2.2 2.2-2.2h6.6c1.2 0 2.2 1 2.2 2.2v6.6c0 1.2-1 2.2-2.2 2.2h-6.6C9 16 8 15 8 13.8V7.2Zm2.2-.2a.2.2 0 0 0-.2.2v6.6c0 .1.1.2.2.2h6.6a.2.2 0 0 0 .2-.2V7.2a.2.2 0 0 0-.2-.2h-6.6ZM5.2 9c.6 0 1 .4 1 1v6.8c0 .5.4 1 1 1H14c.6 0 1 .4 1 1s-.4 1-1 1H7.2a3 3 0 0 1-3-3V10c0-.6.4-1 1-1Z" />
                     </svg>
+                  </button>
+                </div>
+                <div class="contact-social-item">
+                  <a class="contact-social-link" href="https://discord.com/users/1414583583661887488" target="_blank" rel="noopener noreferrer" aria-label="Open Discord">
+                    <span class="contact-social-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M8.2 7.4c2.5-.8 5.1-.8 7.6 0l.5.9c1.2.2 2.3.6 3.3 1.2.8 2.9.6 5.6-.7 8.1-1.3.9-2.6 1.4-4 1.7l-.9-1.4c.5-.2 1-.4 1.5-.7-2.3.7-4.7.7-7 0 .5.3 1 .5 1.5.7l-.9 1.4c-1.4-.3-2.7-.9-4-1.7-1.3-2.5-1.5-5.2-.7-8.1 1-.6 2.1-1 3.3-1.2l.5-.9Zm1.5 6.7c.7 0 1.2-.6 1.2-1.3s-.5-1.3-1.2-1.3-1.2.6-1.2 1.3.5 1.3 1.2 1.3Zm4.6 0c.7 0 1.2-.6 1.2-1.3s-.5-1.3-1.2-1.3-1.2.6-1.2 1.3.5 1.3 1.2 1.3Z" />
+                      </svg>
+                    </span>
+                    <span class="contact-social-separator" aria-hidden="true">:</span>
+                    <span class="contact-social-value">1414583583661887488</span>
                   </a>
+                  <button class="contact-copy-button" type="button" data-copy="1414583583661887488" aria-label="Copy Discord ID">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 7.2c0-1.2 1-2.2 2.2-2.2h6.6c1.2 0 2.2 1 2.2 2.2v6.6c0 1.2-1 2.2-2.2 2.2h-6.6C9 16 8 15 8 13.8V7.2Zm2.2-.2a.2.2 0 0 0-.2.2v6.6c0 .1.1.2.2.2h6.6a.2.2 0 0 0 .2-.2V7.2a.2.2 0 0 0-.2-.2h-6.6ZM5.2 9c.6 0 1 .4 1 1v6.8c0 .5.4 1 1 1H14c.6 0 1 .4 1 1s-.4 1-1 1H7.2a3 3 0 0 1-3-3V10c0-.6.4-1 1-1Z" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="contact-social-item">
+                  <a class="contact-social-link" href="https://t.me/Amytiance" target="_blank" rel="noopener noreferrer" aria-label="Open Telegram">
+                    <span class="contact-social-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M20.7 4.4 3.9 10.9c-1.1.4-1.1 1.1-.2 1.4l4.3 1.3 1.7 5.2c.2.6.5.7 1 .3l2.5-2.4 4.4 3.2c.8.4 1.3.2 1.5-.8l2.7-12.9c.3-1.2-.4-1.7-1.1-1.4ZM8.7 13.2l9.4-5.9c.4-.2.8-.1.5.2l-7.6 6.9-.3 3.1-1.4-4.2Z" />
+                      </svg>
+                    </span>
+                    <span class="contact-social-separator" aria-hidden="true">:</span>
+                    <span class="contact-social-value">Amytiance</span>
+                  </a>
+                  <button class="contact-copy-button" type="button" data-copy="Amytiance" aria-label="Copy Telegram ID">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M8 7.2c0-1.2 1-2.2 2.2-2.2h6.6c1.2 0 2.2 1 2.2 2.2v6.6c0 1.2-1 2.2-2.2 2.2h-6.6C9 16 8 15 8 13.8V7.2Zm2.2-.2a.2.2 0 0 0-.2.2v6.6c0 .1.1.2.2.2h6.6a.2.2 0 0 0 .2-.2V7.2a.2.2 0 0 0-.2-.2h-6.6ZM5.2 9c.6 0 1 .4 1 1v6.8c0 .5.4 1 1 1H14c.6 0 1 .4 1 1s-.4 1-1 1H7.2a3 3 0 0 1-3-3V10c0-.6.4-1 1-1Z" />
+                    </svg>
+                  </button>
                 </div>
               </div>
             </div>
           </section>
 
-          <section class="contact-panel-tab" id="contact-panel-apply" role="tabpanel" data-contact-panel="apply" hidden>
+          <section class="contact-panel-tab contact-apply-panel" id="contact-panel-apply" role="tabpanel" data-contact-panel="apply" hidden>
             <div class="contact-panel-copy">
               <h2>Start the application when you're ready for review.</h2>
             </div>
 
             <div class="application-preview-card">
-              <div class="application-intake-panel">
-                <div class="application-intake-main">
-                  <div class="application-intake-header">
-                    <span>Merchant application</span>
-                    <strong>~5 min</strong>
-                  </div>
-                  <div class="application-intake-fields" aria-hidden="true">
-                    <div>
-                      <small>Business profile</small>
-                      <span>Company, category, markets</span>
-                    </div>
-                    <div>
-                      <small>Product review</small>
-                      <span>Website, checkout flow, customer use case</span>
-                    </div>
-                    <div>
-                      <small>Payment needs</small>
-                      <span>Cards, wallets, stablecoins, settlement</span>
-                    </div>
-                    <div>
-                      <small>Risk context</small>
-                      <span>Current processor, disputes, approval history</span>
-                    </div>
-                  </div>
-                </div>
-
-                <aside class="application-review-rail" aria-label="Application review process">
-                  <span>What happens next</span>
-                  <ol>
-                    <li><strong>Submit details</strong><small>We review your product and model.</small></li>
-                    <li><strong>Operator review</strong><small>A real person checks fit and risk.</small></li>
-                    <li><strong>Setup path</strong><small>Get approval next steps and onboarding.</small></li>
-                  </ol>
-                </aside>
-              </div>
-              <button class="button button-dark" type="button" data-application-modal-open>Open application page →</button>
+              <a class="button button-dark" href="/apply">Open application page →</a>
             </div>
           </section>
         </div>
@@ -204,33 +229,33 @@
           </div>
           <div class="application-modal-body" data-application-modal-body>
             <p>
-              The public application form opens at <a href="/apply">tiance.io/apply</a>. Submit the essentials first; KYC documents are requested only after preliminary approval.
+              Send us your business details by email or Telegram. Submit the essentials first; KYC documents are requested only after preliminary approval.
             </p>
-            <a class="button button-dark" href="mailto:hello@tiance.io">Request the form →</a>
+            <a class="button button-dark" href="mailto:hello@tiance.io?subject=TIANCE%20merchant%20application%20review">Request application review →</a>
           </div>
         </div>
       </dialog>
 
       <section class="dark-cta contact-final-cta reveal">
         <div class="logo cta-logo"><img class="logo-image" src="./assets/logo-slanted-t.svg" alt="" /></div>
-        <div class="section-kicker">STILL DECIDING?</div>
+        <div class="section-kicker">Still Deciding?</div>
         <h2>
           <span>Not ready to apply?</span>
           <span>Talk to us first.</span>
         </h2>
-        <a class="button lime-button" href="https://t.me/TIANCE_support_bot">Talk to Us on Telegram →</a>
+        <a class="button lime-button" href="https://t.me/Amytiance">Talk to Us on Telegram →</a>
       </section>
 
       <footer class="site-footer reveal contact-footer">
         <div class="footer-top">
-          <h2>Apply in 5 minutes — we review within 2 business days.</h2>
-          <a class="button lime-button" href="https://t.me/TIANCE_support_bot" data-application-cta="review" data-application-source="footer">Apply for Review →</a>
+          <h2>Apply in 5 minutes - We get your stable payment collection ready within 2 days.</h2>
+          <a class="button lime-button" href="https://t.me/Amytiance" data-application-cta="review" data-application-source="footer">Apply for Review →</a>
         </div>
         <div class="footer-links">
           <div><strong>Products</strong><a>Hosted Checkout</a><a>Payment Links</a><a>WooCommerce</a><a>API Integration</a><a>Settlement & Reporting</a></div>
           <div><strong>Solutions</strong><a>AI Web</a><a>SaaS & Digital Products</a><a>Community Sellers</a><a>Cross-Border Merchants</a></div>
           <div><strong>Company</strong><a href="./index.html#why-tiance">Developers</a><a href="./index.html#pricing">Pricing</a><a>Compliance Center</a><a href="./contact.html">Contact</a></div>
-          <div><strong>Contact</strong><a href="https://t.me/TIANCE_support_bot">Telegram</a><a href="https://discord.gg/tiance">Discord</a><a href="mailto:hello@tiance.io">Email</a></div>
+          <div><strong>Contact</strong><a href="https://t.me/Amytiance">Telegram</a><a href="https://discord.gg/tiance">Discord</a><a href="mailto:hello@tiance.io">Email</a></div>
         </div>
         <div class="footer-bottom">
           <p>© 2026 Tiance. All rights reserved. <a href="./terms.html">Terms</a> · <a href="./privacy.html">Privacy</a> · <a href="./aup.html">AUP</a> · EN | 中文</p>
@@ -241,8 +266,9 @@
     </main>
 
     <script>
-      window.TIANCE_APPLICATION_FORM_URL = "/apply";
+      window.TIANCE_APPLICATION_FORM_URL = "";
     </script>
+    <script src="./analytics.js?v=site-20260709"></script>
     <script src="./script.js?v=contact-hub-20260704g"></script>
   </body>
 </html>
