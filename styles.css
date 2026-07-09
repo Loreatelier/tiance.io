@@ -4662,6 +4662,19 @@ html[lang="en"] .faq-header h2 {
   line-height: 1.6;
 }
 
+.footer-analytics-disclosure {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999;
+  line-height: 1.6;
+}
+
+.footer-analytics-disclosure a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .footer-logo {
   width: 120px;
   height: 120px;
