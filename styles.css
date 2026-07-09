@@ -2205,6 +2205,8 @@ h1 {
 .capability-feature-list {
   position: relative;
   z-index: 2;
+  width: 100%;
+  min-width: 0;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0 38px;
@@ -2212,6 +2214,7 @@ h1 {
 }
 
 .capability-feature-list article {
+  min-width: 0;
   display: grid;
   grid-template-columns: 36px minmax(132px, 0.42fr) minmax(0, 1fr);
   gap: 14px;
@@ -2238,26 +2241,32 @@ h1 {
   border-radius: 7px;
   background: color-mix(in srgb, var(--lime) 42%, rgba(255, 255, 255, 0.88));
   color: color-mix(in srgb, var(--ink) 72%, #2f8b54);
-  font-size: 13px;
-  font-weight: 650;
+  font-family: var(--font);
+  font-size: 10px;
+  font-weight: 760;
+  letter-spacing: 0.02em;
   line-height: 1;
   box-shadow: 0 6px 16px rgba(83, 185, 106, 0.1);
 }
 
 .capability-feature-list h3 {
+  min-width: 0;
   margin: 1px 0 0;
   color: var(--ink);
   font-size: 16px;
   font-weight: 600;
   letter-spacing: -0.02em;
   line-height: 1.25;
+  overflow-wrap: anywhere;
 }
 
 .capability-feature-list p {
+  min-width: 0;
   margin: 0;
   color: color-mix(in srgb, var(--ink) 66%, transparent);
   font-size: 15px;
   line-height: 1.48;
+  overflow-wrap: anywhere;
 }
 
 .image-features {
@@ -5523,6 +5532,7 @@ html[lang="en"] .faq-header h2 {
 
   .capability-feature-list {
     grid-template-columns: 1fr;
+    width: 100%;
     margin-top: 30px;
   }
 
@@ -5531,6 +5541,7 @@ html[lang="en"] .faq-header h2 {
     gap: 10px 12px;
     margin-inline: 0;
     padding: 16px 14px 18px;
+    overflow: hidden;
   }
 
   .capability-feature-list p {
@@ -6517,11 +6528,16 @@ html:lang(zh-CN) .dark-cta h2 {
 
   .dark-cta h2 {
     font-size: 31px;
+    overflow-wrap: anywhere;
   }
 
   html:lang(zh-CN) .dark-cta h2 {
     font-size: 27px;
     line-height: 1.2;
+  }
+
+  .dark-cta .no-break {
+    white-space: normal;
   }
 
   .dark-cta-actions {
